@@ -6,8 +6,9 @@ public class PlaceUnit : MonoBehaviour, ITap
 {
     public GameObject spawnUnit;
     public Transform spawnPosition;
+    public Transform spawnUnitPosition;
     public void onTapAction()
     {
-        Instantiate(spawnUnit, spawnPosition.position, spawnPosition.rotation);
+        Instantiate(spawnUnit, spawnPosition.position, spawnUnitPosition.rotation);
     }
 }

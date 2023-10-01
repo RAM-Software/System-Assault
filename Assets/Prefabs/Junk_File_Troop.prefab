@@ -66,7 +66,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d1240459dc7115a45b8e797b2ac3ab55,
         type: 3}
       propertyPath: m_Name
-      value: Troop_JunkFile_PlaceHolder Variant
+      value: Junk_File_Troop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
