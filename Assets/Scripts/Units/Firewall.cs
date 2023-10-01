@@ -21,7 +21,7 @@ public class Firewall : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
-        wallCurrentHealth = Mathf.Clamp(wallCurrentHealth + amount, 0, wallMaxHealth);
+        wallCurrentHealth = Mathf.Clamp(wallCurrentHealth - amount, 0, wallMaxHealth);
         Debug.Log(wallCurrentHealth + "/" + wallMaxHealth);
         if (wallCurrentHealth <= 0)
         {

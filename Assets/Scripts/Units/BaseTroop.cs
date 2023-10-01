@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class BaseTroop : MonoBehaviour
 {
@@ -12,16 +13,20 @@ public class BaseTroop : MonoBehaviour
     public int attackDamage = 5;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+
+    //NavMesh Variables
+    private NavMeshAgent troopAgent;
     
-    void Awake()
+    private void Awake()
     {
+        troopAgent = GetComponent<NavMeshAgent>();
         currentHealth = 50;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        troopAgent.destination = objective.targetPosition; 
     }
 
     //Attack Collision
