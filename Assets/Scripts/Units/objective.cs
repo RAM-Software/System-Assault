@@ -5,7 +5,7 @@ using UnityEngine;
 public class objective : MonoBehaviour
 {
     //The location units move towards.
-    public static Vector3 targetPosition;
+    public Vector3 targetPosition;
     public GameObject Objective1;
     public GameObject Objective2;
     public GameObject Objective3;

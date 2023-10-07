@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Objective1
+  - Objective2
+  - Objective3
+  - Objective4
+  - Objective5
+  - Objective6
+  - Objective7
   layers:
   - Default
   - TransparentFX

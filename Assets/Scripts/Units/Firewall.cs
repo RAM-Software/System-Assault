@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Firewall : MonoBehaviour
 {
-    int wallMaxHealth = 100;
-    int wallCurrentHealth;
+    public int wallMaxHealth = 100;
+    public int wallCurrentHealth;
 
     AudioSource audioSource;
     public AudioClip walldamagedClip;

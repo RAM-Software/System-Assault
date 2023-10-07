@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BaseTroop : MonoBehaviour
+public class FastTroop : MonoBehaviour
 {
     //Pathing Variables
-    public Vector3 targetPosition;
+    private Vector3 targetPosition;
     public GameObject Objective1;
     public GameObject Objective2;
     public GameObject Objective3;
@@ -30,7 +30,7 @@ public class BaseTroop : MonoBehaviour
     private void Awake()
     {
         troopAgent = GetComponent<NavMeshAgent>();
-        currentHealth = 50;
+        currentHealth = 20;
         targetPosition = Objective1.GetComponent<Transform>().position;
     }
 

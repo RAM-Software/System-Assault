@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class BaseTroop : MonoBehaviour
+public class ZipTroop : MonoBehaviour
 {
     //Pathing Variables
-    public Vector3 targetPosition;
+    private Vector3 targetPosition;
     public GameObject Objective1;
     public GameObject Objective2;
     public GameObject Objective3;
@@ -27,10 +27,16 @@ public class BaseTroop : MonoBehaviour
     //NavMesh Variables
     private NavMeshAgent troopAgent;
 
+    //Death spawn Variables
+    public GameObject JunkTrooper;
+    GameObject clone1;
+    GameObject clone2;
+    GameObject clone3;
+
     private void Awake()
     {
         troopAgent = GetComponent<NavMeshAgent>();
-        currentHealth = 50;
+        currentHealth = 100;
         targetPosition = Objective1.GetComponent<Transform>().position;
     }
 
@@ -51,6 +57,7 @@ public class BaseTroop : MonoBehaviour
             {
                 troopAgent.enabled = false;
                 wall.ChangeHealth(attackDamage);
+                ChangeHealth(100);
             }
             //End of Attack code
 
@@ -76,11 +83,20 @@ public class BaseTroop : MonoBehaviour
 
         if (currentHealth > 0)
         {
-
+            
         }
 
         if (currentHealth <= 0)
         {
+            clone1 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+            clone2 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+            clone3 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+            BaseTroop cloneScript1 = clone1.GetComponent<BaseTroop>();
+            cloneScript1.targetPosition = targetPosition;
+            BaseTroop cloneScript2 = clone2.GetComponent<BaseTroop>();
+            cloneScript2.targetPosition = targetPosition;
+            BaseTroop cloneScript3 = clone3.GetComponent<BaseTroop>();
+            cloneScript3.targetPosition = targetPosition;
             Destroy(gameObject);
         }
     }
