@@ -42,7 +42,7 @@ public class projectileArea : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         //Particle code
-        //GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
+        GameObject effectIns = (GameObject)Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(effectIns, 2f);
         CheckForEnemies();
     }
