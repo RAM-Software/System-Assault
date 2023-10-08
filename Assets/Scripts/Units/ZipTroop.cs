@@ -57,7 +57,6 @@ public class ZipTroop : MonoBehaviour
             {
                 troopAgent.enabled = false;
                 wall.ChangeHealth(attackDamage);
-                ChangeHealth(100);
             }
             //End of Attack code
 

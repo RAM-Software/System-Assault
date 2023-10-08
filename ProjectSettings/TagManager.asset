@@ -11,6 +11,7 @@ TagManager:
   - Objective5
   - Objective6
   - Objective7
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -19,8 +20,8 @@ TagManager:
   - Water
   - UI
   - Troop
-  - 
-  - 
+  - Projectile
+  - Tower
   - 
   - 
   - 
