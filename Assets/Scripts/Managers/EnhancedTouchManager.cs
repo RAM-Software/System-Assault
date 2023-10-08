@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using TouchPhase = UnityEngine.InputSystem.TouchPhase;
+
 
 public class EnhancedTouchManager : MonoBehaviour
 {
+    public float touchSpeed = 10f;
+    private float lastMultiTouchDistance;
+
     private void Awake()
     {
         EnhancedTouchSupport.Enable();
@@ -21,8 +26,51 @@ public class EnhancedTouchManager : MonoBehaviour
     {
         if (Touch.activeFingers.Count == 1)
         {
-            Touch activeTouch = Touch.activeFingers[0].currentTouch;
-            Debug.Log($"Phase: {activeTouch.phase} | Position: {activeTouch.startScreenPosition}");
+            MoveCamera(Touch.activeTouches[0]);
         }
+        else if (Touch.activeTouches.Count == 2)
+        {
+            ZoomCamera(Touch.activeTouches[0], Touch.activeTouches[1]);
+        }
+    }
+
+    //Moves the camera when one finger is touching the screen and moving
+    private void MoveCamera(Touch touch)
+    {
+        //Returns if finger is not actively moving
+        if (touch.phase != TouchPhase.Moved)
+        {
+            return;
+        }
+
+        //Calculates new camera position
+        Vector3 newPosition = new Vector3(-touch.delta.normalized.x, 0, -touch.delta.normalized.y) * Time.deltaTime * touchSpeed;
+
+        //Passes new location to CameraController Move function
+        CameraController.Instance?.Move(newPosition);
+    }    
+
+    private void ZoomCamera(Touch firstTouch, Touch secondTouch)
+    {
+        //Confirms if this is a first time a second finger has touched the screen
+        if (firstTouch.phase == TouchPhase.Began || secondTouch.phase == TouchPhase.Began)
+        {
+            lastMultiTouchDistance = Vector2.Distance(firstTouch.screenPosition, secondTouch.screenPosition);
+        }
+
+        //Returns if both fingers are not actively moving
+        if (firstTouch.phase != TouchPhase.Moved || secondTouch.phase != TouchPhase.Moved)
+        {
+            return;
+        }
+
+        //Checks if fingers are pinching together or apart
+        float newMultiTouchDistance = Vector2.Distance(firstTouch.screenPosition, secondTouch.screenPosition);
+
+        //Tells Zoom function if zooming in or out
+        CameraController.Instance?.Zoom(newMultiTouchDistance < lastMultiTouchDistance);
+
+        //Resets lastMultiTouchDistance
+        lastMultiTouchDistance = newMultiTouchDistance;
     }
 }
