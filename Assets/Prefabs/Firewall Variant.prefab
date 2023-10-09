@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0b529864529c7499459fbfb95c14ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallMaxHealth: 200
+  wallMaxHealth: 300
   wallCurrentHealth: 0
   walldamagedClip: {fileID: 8300000, guid: a5948d5129d710a4294dd92471647812, type: 3}
   walldestroyedClip: {fileID: 8300000, guid: 143d8a400c8063a4ab4f1de1fe29de65, type: 3}

@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 87079e0fb31617546abeca3b8595f532,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87079e0fb31617546abeca3b8595f532,
         type: 3}
@@ -171,7 +171,7 @@ MonoBehaviour:
   maxHealth: 200
   attackDamage: 5
   timeBetweenAttacks: 2
-  JunkTrooper: {fileID: 8215262180566207635, guid: b0df7ce620203f541aa29d827f1d4d43,
+  JunkTrooper: {fileID: 3392431046632838094, guid: b0df7ce620203f541aa29d827f1d4d43,
     type: 3}
 --- !u!65 &6709620484155681996
 BoxCollider:
