@@ -3,6 +3,16 @@
 public class CameraController : MonoBehaviour
 {
     public static CameraController Instance { get; private set; }
+    public int gameMode;
+
+    #region MouseMovement
+
+    private Vector3 Origin;
+    private Vector3 Difference;
+    private Vector3 ResetCamera;
+    #endregion
+
+    private bool drag = false;
 
     public Camera MyCamera { get; private set; }
     public float CurrentZoom
@@ -41,6 +51,14 @@ public class CameraController : MonoBehaviour
     private Vector3 zoomTargetPosition;
     private float currentZoom;
 
+    private void Start()
+    {
+        if (gameMode == 1)
+        {
+            ResetCamera = Camera.main.transform.position;
+
+        }
+    }
     private void Awake()
     {
         if(Instance == null)
@@ -53,28 +71,38 @@ public class CameraController : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
-        //Set the target position to the current location.
-        moveTargetPosition = transform.position;
 
-        //Get a reference to the child camera 
-        MyCamera = transform.GetComponentInChildren<Camera>();
+        if (gameMode == 0)
+        {
 
-        //Set the rotation of the child camera based on property specified in Inspector
-        MyCamera.transform.rotation = Quaternion.AngleAxis(CameraAngle, Vector3.right);
 
-        CurrentZoom = DefaultZoom;
-        //MyCamera.transform.position = zoomTargetPosition;
 
+            //Set the target position to the current location.
+            moveTargetPosition = transform.position;
+
+            //Get a reference to the child camera 
+            MyCamera = transform.GetComponentInChildren<Camera>();
+
+            //Set the rotation of the child camera based on property specified in Inspector
+            MyCamera.transform.rotation = Quaternion.AngleAxis(CameraAngle, Vector3.right);
+
+            CurrentZoom = DefaultZoom;
+            //MyCamera.transform.position = zoomTargetPosition;
+        }
     }
 
     private void Update()
     {
-        //Smoothly move the camera
-        transform.position = Vector3.Lerp(transform.position, moveTargetPosition, Time.deltaTime * MovementSpeed);
+        if (gameMode == 0)
+        {
 
-        //Smoothly zoom the camera
-        MyCamera.transform.localPosition = Vector3.Lerp(MyCamera.transform.localPosition, zoomTargetPosition, Time.deltaTime * ZoomSpeed);
+
+            //Smoothly move the camera
+            transform.position = Vector3.Lerp(transform.position, moveTargetPosition, Time.deltaTime * MovementSpeed);
+
+            //Smoothly zoom the camera
+            MyCamera.transform.localPosition = Vector3.Lerp(MyCamera.transform.localPosition, zoomTargetPosition, Time.deltaTime * ZoomSpeed);
+        }
     }
 
     /// <summary>
@@ -82,6 +110,7 @@ public class CameraController : MonoBehaviour
     /// </summary>
     private void UpdateCameraTarget()
     {
+        if (gameMode == 0)
         zoomTargetPosition = (Vector3.up * LookOffset) + (Quaternion.AngleAxis(CameraAngle, Vector3.right) * Vector3.back) * currentZoom;
     }
 
@@ -91,7 +120,9 @@ public class CameraController : MonoBehaviour
     /// <param name="newPosition">Position that the camera should be moving towards</param>
     public void Move(Vector3 newPosition)
     {
-        moveTargetPosition = transform.position + newPosition;
+        if (gameMode == 0)
+
+            moveTargetPosition = transform.position + newPosition;
     }
 
     /// <summary>
@@ -100,8 +131,43 @@ public class CameraController : MonoBehaviour
     /// <param name="zoomOut">Whether the camera should zoom out or in</param>
     public void Zoom(bool zoomOut)
     {
+
+        if (gameMode == 0)
         CurrentZoom = Mathf.Clamp(currentZoom + (zoomOut ? ZoomAmount : -ZoomAmount), ZoomMin, ZoomMax);
 
+    }
+
+
+    private void LateUpdate()
+    {
+        if (gameMode == 1)
+        {
+
+
+            if (Input.GetMouseButton(0))
+            {
+                Difference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position;
+                if (drag == false)
+                {
+                    drag = true;
+                    Origin = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                }
+
+            }
+            else
+            {
+                drag = false;
+            }
+
+            if (drag)
+            {
+                Camera.main.transform.position = Origin - Difference * 0.5f;
+            }
+
+            if (Input.GetMouseButton(1))
+                Camera.main.transform.position = ResetCamera;
+
+        }
     }
 }
 

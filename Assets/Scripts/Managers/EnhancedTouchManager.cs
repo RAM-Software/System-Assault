@@ -2,18 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.InputSystem;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 
 
 public class EnhancedTouchManager : MonoBehaviour
 {
+    private PlayerInput input;
     public float touchSpeed = 10f;
     private float lastMultiTouchDistance;
+
 
     private void Awake()
     {
         EnhancedTouchSupport.Enable();
+        input = GetComponent<PlayerInput>();
     }
     // Start is called before the first frame update
     void Start()
