@@ -119,8 +119,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 70
-  attackDamage: 10
-  explosionRadius: 5
+  impactEffect: {fileID: 0}
+  attackDamage: 15
+  explosionRadius: 6
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
