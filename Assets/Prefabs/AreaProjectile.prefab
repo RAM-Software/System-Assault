@@ -121,7 +121,7 @@ MonoBehaviour:
   speed: 70
   impactEffect: {fileID: 0}
   attackDamage: 15
-  explosionRadius: 6
+  explosionRadius: 5
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64

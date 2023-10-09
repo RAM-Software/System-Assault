@@ -217,6 +217,6 @@ MonoBehaviour:
     type: 3}
   Objective7: {fileID: 2436656724542074199, guid: 64b1e3484c33da04281c8a87e4e367f4,
     type: 3}
-  maxHealth: 60
+  maxHealth: 80
   attackDamage: 10
   timeBetweenAttacks: 2
