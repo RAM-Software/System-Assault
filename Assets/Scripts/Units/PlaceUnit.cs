@@ -8,24 +8,50 @@ public class PlaceUnit : MonoBehaviour, ITap
     public Transform spawnPosition;
     public Transform spawnUnitPosition;
     public string activeTroop;
+    public static int currencyCount = 0;
 
+    void Start()
+    {
+        InvokeRepeating("currencyGain", 2.0f, 1.0f);
+    }
     void Update()
     {
         activeTroop = SelectUnit.currentTroop;
     }
+
     public void onTapAction()
     {
+        Debug.Log("Clicking for purchase");
+        Debug.Log(currencyCount);
         if (activeTroop == "Basic")
         {
-            Instantiate(normalUnit, spawnPosition.position, spawnUnitPosition.rotation);
+            if (currencyCount >= 50)
+            {
+                Instantiate(normalUnit, spawnPosition.position, spawnUnitPosition.rotation);
+                currencyCount = currencyCount - 50;
+            }
         }
         if (activeTroop == "Fast")
         {
-            Instantiate(fastUnit, spawnPosition.position, spawnUnitPosition.rotation);
+            if (currencyCount >= 50)
+            {
+                Instantiate(fastUnit, spawnPosition.position, spawnUnitPosition.rotation);
+                currencyCount = currencyCount - 70;
+            }
         }
         if (activeTroop == "Tank")
         {
-            Instantiate(tankUnit, spawnPosition.position, spawnUnitPosition.rotation);
+            if (currencyCount >= 50)
+            {
+                Instantiate(tankUnit, spawnPosition.position, spawnUnitPosition.rotation);
+                currencyCount = currencyCount - 150;
+            }
         }
+    }
+
+    void currencyGain()
+    {
+        currencyCount = currencyCount + 1;
+        Debug.Log(currencyCount);
     }
 }
