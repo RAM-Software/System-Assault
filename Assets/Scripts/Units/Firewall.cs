@@ -45,6 +45,7 @@ public class Firewall : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-        audioSource.PlayOneShot(clip);
+       audioSource.PlayOneShot(clip);
+       //AudioManager.instance.PlaySFX("WallBreak"); // example of code for audio manager
     }
 }
