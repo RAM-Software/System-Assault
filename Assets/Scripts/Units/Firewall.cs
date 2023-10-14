@@ -9,16 +9,16 @@ public class Firewall : MonoBehaviour
     public int wallGold = 300;
     public string hubTag = "SpawnZone";
 
-    AudioSource audioSource;
-    public AudioClip walldamagedClip;
-    public AudioClip walldestroyedClip;
+    //AudioSource audioSource;
+    //public AudioClip walldamagedClip;
+    //public AudioClip walldestroyedClip;
 
     // Start is called before the first frame update
     void Start()
     {
         wallCurrentHealth = wallMaxHealth;
 
-        audioSource = GetComponent<AudioSource>();
+        //audioSource = GetComponent<AudioSource>();
     }
 
     public void ChangeHealth(int amount)
@@ -35,15 +35,17 @@ public class Firewall : MonoBehaviour
 
         if (wallCurrentHealth <= 0)
         {
-            PlaySound(walldestroyedClip);
+            //PlaySound(walldestroyedClip);
+            AudioManager.instance.PlaySFX("WallDestroyed");
+
             PlaceUnit.currencyCount = PlaceUnit.currencyCount + wallGold;
             Destroy(gameObject, 0.35f); 
         }
     }
 
-    public void PlaySound(AudioClip clip)
+    /*public void PlaySound(AudioClip clip)
     {
        //audioSource.PlayOneShot(clip);
-       AudioManager.instance.PlaySFX("WallBreak"); // example of code for audio manager
-    }
+       //AudioManager.instance.PlaySFX("WallBreak"); // example of code for audio manager
+    } */
 }

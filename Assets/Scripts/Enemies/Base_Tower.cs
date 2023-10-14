@@ -75,6 +75,8 @@ public class Base_Tower : MonoBehaviour
     {
         GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         projectileBasic projectile = projectileGO.GetComponent<projectileBasic>();
+        
+        AudioManager.instance.PlaySFX("TowerShoot");
 
         if (projectile != null)
             projectile.Seek(target);

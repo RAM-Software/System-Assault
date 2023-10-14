@@ -76,6 +76,8 @@ public class Area_Tower : MonoBehaviour
         GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         projectileArea projectile = projectileGO.GetComponent<projectileArea>();
 
+        AudioManager.instance.PlaySFX("CannonTowerShoot");
+
         if (projectile != null)
             projectile.Seek(target);
     }

@@ -49,7 +49,19 @@ MonoBehaviour:
   _mixer: {fileID: 24100000, guid: 6d56d28209f8b3249afb507d5d043bbe, type: 2}
   _levelMusic: {fileID: 3498279180327660326}
   _levelSFX: {fileID: 602336005139760945}
-  SFXClip: []
+  SFXClip:
+  - clipName: WallDamaged
+    audio: {fileID: 8300000, guid: a5948d5129d710a4294dd92471647812, type: 3}
+    isLoop: 0
+  - clipName: WallDestroyed
+    audio: {fileID: 8300000, guid: 143d8a400c8063a4ab4f1de1fe29de65, type: 3}
+    isLoop: 0
+  - clipName: TowerShoot
+    audio: {fileID: 8300000, guid: ce60d7e51dc901349b0fb8b062e666d6, type: 3}
+    isLoop: 0
+  - clipName: CannonTowerShoot
+    audio: {fileID: 8300000, guid: ce659bbe65c72d34bbb3700fd4f88712, type: 3}
+    isLoop: 0
   musicClip: []
 --- !u!1 &2842976223933153999
 GameObject:
