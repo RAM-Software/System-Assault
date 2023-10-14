@@ -16,6 +16,7 @@ public class PlaceUnit : MonoBehaviour, ITap
     public int tankPrice = 150;
     public int currencyStartAmount = 500;
     public TextMeshProUGUI currencyText;
+    public GameObject helperText;
 
     void Start()
     {
@@ -32,6 +33,7 @@ public class PlaceUnit : MonoBehaviour, ITap
     {
         Debug.Log("Clicking for purchase");
         Debug.Log(currencyCount);
+        helperText.SetActive(false);
         if (activeTroop == "Basic")
         {
             if (currencyCount >= basicPrice)

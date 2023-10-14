@@ -29,7 +29,8 @@ public class Firewall : MonoBehaviour
 
         if (wallCurrentHealth > 0)
         {
-            PlaySound(walldamagedClip);
+            //PlaySound(walldamagedClip);
+            AudioManager.instance.PlaySFX("WallDamaged");
         }
 
         if (wallCurrentHealth <= 0)
@@ -42,7 +43,7 @@ public class Firewall : MonoBehaviour
 
     public void PlaySound(AudioClip clip)
     {
-       audioSource.PlayOneShot(clip);
-       //AudioManager.instance.PlaySFX("WallBreak"); // example of code for audio manager
+       //audioSource.PlayOneShot(clip);
+       AudioManager.instance.PlaySFX("WallBreak"); // example of code for audio manager
     }
 }
