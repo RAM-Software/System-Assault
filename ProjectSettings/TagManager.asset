@@ -12,6 +12,7 @@ TagManager:
   - Objective6
   - Objective7
   - Enemy
+  - SpawnZone
   layers:
   - Default
   - TransparentFX

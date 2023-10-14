@@ -6,6 +6,8 @@ public class Firewall : MonoBehaviour
 {
     public int wallMaxHealth = 100;
     public int wallCurrentHealth;
+    public int wallGold = 300;
+    public string hubTag = "SpawnZone";
 
     AudioSource audioSource;
     public AudioClip walldamagedClip;
@@ -14,15 +16,9 @@ public class Firewall : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wallCurrentHealth = 100;
+        wallCurrentHealth = wallMaxHealth;
 
         audioSource = GetComponent<AudioSource>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void ChangeHealth(int amount)
@@ -39,6 +35,7 @@ public class Firewall : MonoBehaviour
         if (wallCurrentHealth <= 0)
         {
             PlaySound(walldestroyedClip);
+            PlaceUnit.currencyCount = PlaceUnit.currencyCount + wallGold;
             Destroy(gameObject, 0.35f); 
         }
     }

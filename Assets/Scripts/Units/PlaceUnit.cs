@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlaceUnit : MonoBehaviour, ITap
 {
@@ -9,10 +10,18 @@ public class PlaceUnit : MonoBehaviour, ITap
     public Transform spawnUnitPosition;
     public string activeTroop;
     public static int currencyCount = 0;
+    public int goldPerSecond = 1;
+    public int basicPrice = 50;
+    public int fastPrice = 70;
+    public int tankPrice = 150;
+    public int currencyStartAmount = 500;
+    public TextMeshProUGUI currencyText;
 
     void Start()
     {
         InvokeRepeating("currencyGain", 2.0f, 1.0f);
+        currencyCount = currencyStartAmount;
+        SetCurrencyText();
     }
     void Update()
     {
@@ -25,33 +34,43 @@ public class PlaceUnit : MonoBehaviour, ITap
         Debug.Log(currencyCount);
         if (activeTroop == "Basic")
         {
-            if (currencyCount >= 50)
+            if (currencyCount >= basicPrice)
             {
                 Instantiate(normalUnit, spawnPosition.position, spawnUnitPosition.rotation);
-                currencyCount = currencyCount - 50;
+                currencyCount = currencyCount - basicPrice;
+                SetCurrencyText();
             }
         }
         if (activeTroop == "Fast")
         {
-            if (currencyCount >= 50)
+            if (currencyCount >= fastPrice)
             {
                 Instantiate(fastUnit, spawnPosition.position, spawnUnitPosition.rotation);
-                currencyCount = currencyCount - 70;
+                currencyCount = currencyCount - fastPrice;
+                SetCurrencyText();
             }
         }
         if (activeTroop == "Tank")
         {
-            if (currencyCount >= 50)
+            if (currencyCount >= tankPrice)
             {
                 Instantiate(tankUnit, spawnPosition.position, spawnUnitPosition.rotation);
-                currencyCount = currencyCount - 150;
+                currencyCount = currencyCount - tankPrice;
+                SetCurrencyText();
             }
         }
     }
 
     void currencyGain()
     {
-        currencyCount = currencyCount + 1;
-        Debug.Log(currencyCount);
+        currencyCount = currencyCount + goldPerSecond;
+        //Debug.Log(currencyCount);
+        SetCurrencyText();
+    }
+
+    void SetCurrencyText()
+    {
+        // Update the count text with the current count.
+        currencyText.text = "Bytes: " + currencyCount.ToString();
     }
 }
