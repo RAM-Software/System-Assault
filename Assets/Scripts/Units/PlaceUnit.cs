@@ -18,11 +18,19 @@ public class PlaceUnit : MonoBehaviour, ITap
     public TextMeshProUGUI currencyText;
     public GameObject helperText;
 
+
+    //Audio code
+    AudioSource audioSource;
+    public AudioClip troopsummonClip;
+
     void Start()
     {
         InvokeRepeating("currencyGain", 2.0f, 1.0f);
         currencyCount = currencyStartAmount;
         SetCurrencyText();
+
+        //Audio code
+        audioSource = GetComponent<AudioSource>();
     }
     void Update()
     {
@@ -41,6 +49,9 @@ public class PlaceUnit : MonoBehaviour, ITap
                 Instantiate(normalUnit, spawnPosition.position, spawnUnitPosition.rotation);
                 currencyCount = currencyCount - basicPrice;
                 SetCurrencyText();
+
+                //Audio code
+                PlaySound(troopsummonClip);
             }
         }
         if (activeTroop == "Fast")
@@ -50,6 +61,9 @@ public class PlaceUnit : MonoBehaviour, ITap
                 Instantiate(fastUnit, spawnPosition.position, spawnUnitPosition.rotation);
                 currencyCount = currencyCount - fastPrice;
                 SetCurrencyText();
+
+                //Audio code
+                PlaySound(troopsummonClip);
             }
         }
         if (activeTroop == "Tank")
@@ -59,6 +73,9 @@ public class PlaceUnit : MonoBehaviour, ITap
                 Instantiate(tankUnit, spawnPosition.position, spawnUnitPosition.rotation);
                 currencyCount = currencyCount - tankPrice;
                 SetCurrencyText();
+
+                //Audio code
+                PlaySound(troopsummonClip);
             }
         }
     }
@@ -75,4 +92,10 @@ public class PlaceUnit : MonoBehaviour, ITap
         // Update the count text with the current count.
         currencyText.text = "Bytes: " + currencyCount.ToString();
     }
+
+    //Audio code
+    public void PlaySound(AudioClip clip)
+    {
+       audioSource.PlayOneShot(clip);
+    } 
 }

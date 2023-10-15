@@ -18,10 +18,17 @@ public class Area_Tower : MonoBehaviour
     public Transform firePoint;
     public string enemyTag = "Enemy";
 
+    //Audio code
+    AudioSource audioSource;
+    public AudioClip cannontowerShoot;
+
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+
+        //Audio code
+        audioSource = GetComponent<AudioSource>();
     }
 
     void UpdateTarget()
@@ -76,7 +83,9 @@ public class Area_Tower : MonoBehaviour
         GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         projectileArea projectile = projectileGO.GetComponent<projectileArea>();
 
-        AudioManager.instance.PlaySFX("CannonTowerShoot");
+        //Audio code
+        PlaySound(cannontowerShoot);
+        //AudioManager.instance.PlaySFX("CannonTowerShoot");
 
         if (projectile != null)
             projectile.Seek(target);
@@ -88,4 +97,10 @@ public class Area_Tower : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+    //Audio code
+    public void PlaySound(AudioClip clip)
+    {
+       audioSource.PlayOneShot(clip);
+    } 
 }

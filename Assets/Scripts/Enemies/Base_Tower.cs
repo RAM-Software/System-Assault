@@ -18,10 +18,18 @@ public class Base_Tower : MonoBehaviour
     public Transform firePoint;
     public string enemyTag = "Enemy";
 
+
+    //Audio code
+    AudioSource audioSource;
+    public AudioClip towerShoot;
+
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+
+        //Audio code
+        audioSource = GetComponent<AudioSource>();
     }
 
     void UpdateTarget ()
@@ -76,7 +84,10 @@ public class Base_Tower : MonoBehaviour
         GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         projectileBasic projectile = projectileGO.GetComponent<projectileBasic>();
         
-        AudioManager.instance.PlaySFX("TowerShoot");
+        
+        //Audio code
+        PlaySound(towerShoot);
+        //AudioManager.instance.PlaySFX("TowerShoot");
 
         if (projectile != null)
             projectile.Seek(target);
@@ -88,4 +99,10 @@ public class Base_Tower : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
+
+    //Audio code
+    public void PlaySound(AudioClip clip)
+    {
+       audioSource.PlayOneShot(clip);
+    } 
 }
