@@ -51,7 +51,8 @@ public class PlaceUnit : MonoBehaviour, ITap
                 SetCurrencyText();
 
                 //Audio code
-                PlaySound(troopsummonClip);
+                //PlaySound(troopsummonClip);
+                AudioManager.instance.PlaySFX("TroopSummon");
             }
         }
         if (activeTroop == "Fast")
@@ -63,7 +64,8 @@ public class PlaceUnit : MonoBehaviour, ITap
                 SetCurrencyText();
 
                 //Audio code
-                PlaySound(troopsummonClip);
+                //PlaySound(troopsummonClip);
+                AudioManager.instance.PlaySFX("TroopSummon");
             }
         }
         if (activeTroop == "Tank")
@@ -75,7 +77,8 @@ public class PlaceUnit : MonoBehaviour, ITap
                 SetCurrencyText();
 
                 //Audio code
-                PlaySound(troopsummonClip);
+                //PlaySound(troopsummonClip);
+                AudioManager.instance.PlaySFX("TroopSummon");
             }
         }
     }

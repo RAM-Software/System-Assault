@@ -9,7 +9,8 @@ public class CameraController : MonoBehaviour
 
     Vector3 touchStart;
     public float zoomOutMin = 1;
-    public float zoomOutMax = 8;
+    public float zoomOutMax = 10;
+    public float zoomSpeed;
     #endregion
 
     private bool drag = false;
@@ -125,7 +126,7 @@ public class CameraController : MonoBehaviour
                 Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Camera.main.transform.position += direction;
             }
-            zoom(Input.GetAxis("Mouse ScrollWheel"));
+            zoom(Input.GetAxis("Mouse ScrollWheel") * zoomSpeed);
         }
     }
 

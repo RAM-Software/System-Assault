@@ -59,10 +59,13 @@ MonoBehaviour:
   - clipName: TowerShoot
     audio: {fileID: 8300000, guid: ce60d7e51dc901349b0fb8b062e666d6, type: 3}
     isLoop: 0
-  - clipName: CannonTowerShoot
-    audio: {fileID: 8300000, guid: ce659bbe65c72d34bbb3700fd4f88712, type: 3}
+  - clipName: TroopSummon
+    audio: {fileID: 8300000, guid: c32fedc7d4ca4ff4bb0e9210ae9c0765, type: 3}
     isLoop: 0
-  musicClip: []
+  musicClip:
+  - clipName: 
+    audio: {fileID: 0}
+    isLoop: 0
 --- !u!1 &2842976223933153999
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,7 +111,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.025
   m_Pitch: 1
   Loop: 0
   Mute: 0

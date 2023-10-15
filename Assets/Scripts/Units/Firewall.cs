@@ -33,15 +33,15 @@ public class Firewall : MonoBehaviour
         if (wallCurrentHealth > 0)
         {
             //Audio code
-            PlaySound(walldamagedClip);
-            //AudioManager.instance.PlaySFX("WallDamaged");
+            //PlaySound(walldamagedClip);
+            AudioManager.instance.PlaySFX("WallDamaged");
         }
 
         if (wallCurrentHealth <= 0)
         {
             //Audio code
-            PlaySound(walldestroyedClip);
-            //AudioManager.instance.PlaySFX("WallDestroyed");
+            //PlaySound(walldestroyedClip);
+            AudioManager.instance.PlaySFX("WallDestroyed");
 
             PlaceUnit.currencyCount = PlaceUnit.currencyCount + wallGold;
             Destroy(gameObject, 0.35f); 
