@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 30
-  fireRate: 1
+  fireRate: 0.4
   partToRotate: {fileID: 0}
   projectilePrefab: {fileID: 4527051530949364421, guid: f509f4cc267777f468e7043b341482c3,
     type: 3}
