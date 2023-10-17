@@ -114,6 +114,7 @@ public class BaseTroop : MonoBehaviour
         }
         if (other.gameObject.name == "EndZone")
         {
+            AudioManager.instance.PlaySFX("TroopSucceed");
             Destroy(gameObject);
         }
     }

@@ -52,7 +52,11 @@ public class PlaceUnit : MonoBehaviour, ITap
 
                 //Audio code
                 //PlaySound(troopsummonClip);
-                AudioManager.instance.PlaySFX("TroopSummon");
+                AudioManager.instance.PlaySFX("JunkTroopSummon");
+            }
+            else
+            {
+                AudioManager.instance.PlaySFX("FailSummon");
             }
         }
         if (activeTroop == "Fast")
@@ -65,7 +69,11 @@ public class PlaceUnit : MonoBehaviour, ITap
 
                 //Audio code
                 //PlaySound(troopsummonClip);
-                AudioManager.instance.PlaySFX("TroopSummon");
+                AudioManager.instance.PlaySFX("MailTroopSummon");
+            }
+            else
+            {
+                AudioManager.instance.PlaySFX("FailSummon");
             }
         }
         if (activeTroop == "Tank")
@@ -78,7 +86,11 @@ public class PlaceUnit : MonoBehaviour, ITap
 
                 //Audio code
                 //PlaySound(troopsummonClip);
-                AudioManager.instance.PlaySFX("TroopSummon");
+                AudioManager.instance.PlaySFX("ZipTroopSummon");
+            }
+            else
+            {
+                AudioManager.instance.PlaySFX("FailSummon");
             }
         }
     }

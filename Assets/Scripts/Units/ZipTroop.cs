@@ -129,6 +129,8 @@ public class ZipTroop : MonoBehaviour
         }
         if (other.gameObject.name == "EndZone")
         {
+
+            AudioManager.instance.PlaySFX("TroopSucceed");
             Destroy(gameObject);
         }
     }

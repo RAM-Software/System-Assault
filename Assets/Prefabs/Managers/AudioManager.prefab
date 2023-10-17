@@ -51,16 +51,28 @@ MonoBehaviour:
   _levelSFX: {fileID: 602336005139760945}
   SFXClip:
   - clipName: WallDamaged
-    audio: {fileID: 8300000, guid: a5948d5129d710a4294dd92471647812, type: 3}
+    audio: {fileID: 8300000, guid: 72e2a1f9abe1b9745a51b5b6f9a3d9eb, type: 3}
     isLoop: 0
   - clipName: WallDestroyed
-    audio: {fileID: 8300000, guid: 143d8a400c8063a4ab4f1de1fe29de65, type: 3}
+    audio: {fileID: 8300000, guid: f54a6aec945c2da4d9bc51bad5384af4, type: 3}
     isLoop: 0
   - clipName: TowerShoot
     audio: {fileID: 8300000, guid: ce60d7e51dc901349b0fb8b062e666d6, type: 3}
     isLoop: 0
-  - clipName: TroopSummon
-    audio: {fileID: 8300000, guid: c32fedc7d4ca4ff4bb0e9210ae9c0765, type: 3}
+  - clipName: JunkTroopSummon
+    audio: {fileID: 8300000, guid: e8e3fdf632fd4f64ea184fcb6ee8718b, type: 3}
+    isLoop: 0
+  - clipName: MailTroopSummon
+    audio: {fileID: 8300000, guid: cc9cba03467c60e4eb046e885e500b2b, type: 3}
+    isLoop: 0
+  - clipName: ZipTroopSummon
+    audio: {fileID: 8300000, guid: 20613ad7536eb19429cea500c5311cb8, type: 3}
+    isLoop: 0
+  - clipName: FailSummon
+    audio: {fileID: 8300000, guid: 4e8928289676d464aaa435fa062d6319, type: 3}
+    isLoop: 0
+  - clipName: TroopSucceed
+    audio: {fileID: 8300000, guid: 230d467d638dafe439006bda358dac89, type: 3}
     isLoop: 0
   musicClip:
   - clipName: 
