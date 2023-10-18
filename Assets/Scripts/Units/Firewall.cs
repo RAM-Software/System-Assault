@@ -17,17 +17,18 @@ public class Firewall : MonoBehaviour
     public AudioClip walldestroyedClip;
 
     //Disable Towers Code
-    public GameObject[] towers;
-    public bool isCorrupted;
+    [SerializeField] Base_Tower[] baseTowers;
+    [SerializeField] Area_Tower[] areaTowers;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         wallCurrentHealth = wallMaxHealth;
-        isCorrupted = true;
 
         //Audio code
         audioSource = GetComponent<AudioSource>();
+
     }
 
     public void ChangeHealth(int amount)
@@ -50,8 +51,7 @@ public class Firewall : MonoBehaviour
             AudioManager.instance.PlaySFX("WallDestroyed");
 
             PlaceUnit.currencyCount = PlaceUnit.currencyCount + wallGold;
-            isCorrupted = false;
-            Destroy(gameObject, 0.35f); 
+            DestroyTower();
         }
     }
 
@@ -60,5 +60,20 @@ public class Firewall : MonoBehaviour
     {
        audioSource.PlayOneShot(clip);
        //AudioManager.instance.PlaySFX("WallBreak"); // example of code for audio manager
-    } 
+    }
+    
+    public void DestroyTower()
+    {
+        for (int i = 0; i < baseTowers.Length; i++) //loops through towers to set corruption to false.
+        {
+            baseTowers[i].isCorrupted = false;
+        }
+
+        for (int i = 0; i < areaTowers.Length; i++)
+        {
+            areaTowers[i].isCorrupted = false;
+        }
+        Destroy(gameObject, 0.35f);
+
+    }
 }

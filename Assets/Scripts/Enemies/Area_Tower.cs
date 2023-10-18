@@ -22,6 +22,9 @@ public class Area_Tower : MonoBehaviour
     AudioSource audioSource;
     public AudioClip cannontowerShoot;
 
+    //Determines if towers can fire
+    public bool isCorrupted;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,9 @@ public class Area_Tower : MonoBehaviour
 
         //Audio code
         audioSource = GetComponent<AudioSource>();
+
+        //Towers corrupted by default
+        isCorrupted = true;
     }
 
     void UpdateTarget()
@@ -69,7 +75,7 @@ public class Area_Tower : MonoBehaviour
         partToRotate.rotation = rotation;
         */
 
-        if (fireCountdown <= 0f)
+        if (fireCountdown <= 0f && isCorrupted) // Can only fire if isCorrupted is false and countdown is up
         {
             Shoot();
             fireCountdown = 1f / fireRate;
