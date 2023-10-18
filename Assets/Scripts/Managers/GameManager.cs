@@ -4,11 +4,12 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
     // Start is called before the first frame update
-    public struct towerInfo
+    public struct towerGroups
     {
         public GameObject[] towers;
-
+        public bool isCorrupted;
 
     }
     void Start()
