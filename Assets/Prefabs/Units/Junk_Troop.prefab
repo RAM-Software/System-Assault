@@ -203,12 +203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
-  Objective1: {fileID: 5835249218254071068, guid: 03b6eb711d68bf7498c2b6ce50b1834f,
-    type: 3}
-  Objective2: {fileID: 8715818324269214490, guid: deaa0c9b10fa7fd4ca95aaa9964c025f,
-    type: 3}
-  Objective3: {fileID: 8304403615186785588, guid: 6b867267f6795294f83a9d04b603c35a,
-    type: 3}
+  Objective1: {fileID: 0}
+  Objective2: {fileID: 0}
+  Objective3: {fileID: 0}
   Objective4: {fileID: 8658362313212864521, guid: 84908c9e36ab7064a9ae38525ccb28b0,
     type: 3}
   Objective5: {fileID: 3697967332370661437, guid: 8cf0e2a48c41e124d9c1530d4cc643d0,
