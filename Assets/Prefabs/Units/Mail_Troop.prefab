@@ -149,6 +149,7 @@ MonoBehaviour:
   maxHealth: 40
   attackDamage: 20
   timeBetweenAttacks: 2
+  endGoalDamage: 2
 --- !u!195 &2121671014797957203
 NavMeshAgent:
   m_ObjectHideFlags: 0

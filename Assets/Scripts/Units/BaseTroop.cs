@@ -23,6 +23,7 @@ public class BaseTroop : MonoBehaviour
     public int attackDamage = 5;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public int endGoalDamage;
 
     //NavMesh Variables
     private NavMeshAgent troopAgent;
@@ -30,7 +31,7 @@ public class BaseTroop : MonoBehaviour
     private void Awake()
     {
         troopAgent = GetComponent<NavMeshAgent>();
-        currentHealth = 50;
+        currentHealth = maxHealth;
         Objective1 = GameObject.Find("Objective1");
         targetPosition = Objective1.GetComponent<Transform>().position;
     }
@@ -48,10 +49,16 @@ public class BaseTroop : MonoBehaviour
         {
             //Attack code here
             Firewall wall = other.gameObject.GetComponent<Firewall>();
+            EndZone end = other.gameObject.GetComponent<EndZone>();
             if (wall != null)
             {
                 troopAgent.enabled = false;
                 wall.ChangeHealth(attackDamage);
+            }
+            if (end != null)
+            {
+                end.ChangeHealth(endGoalDamage);
+                Destroy(gameObject);
             }
             //End of Attack code
 

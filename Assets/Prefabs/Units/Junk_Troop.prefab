@@ -203,17 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
-  Objective1: {fileID: 0}
-  Objective2: {fileID: 0}
-  Objective3: {fileID: 0}
-  Objective4: {fileID: 8658362313212864521, guid: 84908c9e36ab7064a9ae38525ccb28b0,
-    type: 3}
-  Objective5: {fileID: 3697967332370661437, guid: 8cf0e2a48c41e124d9c1530d4cc643d0,
-    type: 3}
-  Objective6: {fileID: 8428986183949208038, guid: ccfc0e3fb58b7e9409112f1f56ab806a,
-    type: 3}
-  Objective7: {fileID: 2436656724542074199, guid: 64b1e3484c33da04281c8a87e4e367f4,
-    type: 3}
   maxHealth: 80
   attackDamage: 10
   timeBetweenAttacks: 2
+  endGoalDamage: 1

@@ -171,6 +171,7 @@ MonoBehaviour:
   maxHealth: 200
   attackDamage: 5
   timeBetweenAttacks: 2
+  endGoalDamage: 3
   JunkTrooper: {fileID: 3392431046632838094, guid: b0df7ce620203f541aa29d827f1d4d43,
     type: 3}
 --- !u!65 &6709620484155681996

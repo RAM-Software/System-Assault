@@ -23,6 +23,7 @@ public class ZipTroop : MonoBehaviour
     public int attackDamage = 5;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
+    public int endGoalDamage;
 
     //NavMesh Variables
     private NavMeshAgent troopAgent;
@@ -36,7 +37,8 @@ public class ZipTroop : MonoBehaviour
     private void Awake()
     {
         troopAgent = GetComponent<NavMeshAgent>();
-        currentHealth = 100;
+        currentHealth = maxHealth;
+        Objective1 = GameObject.Find("Objective1");
         targetPosition = Objective1.GetComponent<Transform>().position;
     }
 
@@ -53,10 +55,16 @@ public class ZipTroop : MonoBehaviour
         {
             //Attack code here
             Firewall wall = other.gameObject.GetComponent<Firewall>();
+            EndZone end = other.gameObject.GetComponent<EndZone>();
             if (wall != null)
             {
                 troopAgent.enabled = false;
                 wall.ChangeHealth(attackDamage);
+            }
+            if (end != null)
+            {
+                end.ChangeHealth(endGoalDamage);
+                Destroy(gameObject);
             }
             //End of Attack code
 
@@ -105,31 +113,31 @@ public class ZipTroop : MonoBehaviour
     {
         if (other.gameObject.name == "Objective1")
         {
+            Objective2 = GameObject.Find("Objective2");
             targetPosition = Objective2.GetComponent<Transform>().position;
         }
         if (other.gameObject.name == "Objective2")
         {
+            Objective3 = GameObject.Find("Objective3");
             targetPosition = Objective3.GetComponent<Transform>().position;
         }
         if (other.gameObject.name == "Objective3")
         {
+            Objective4 = GameObject.Find("Objective4");
             targetPosition = Objective4.GetComponent<Transform>().position;
         }
         if (other.gameObject.name == "Objective4")
         {
+            Objective5 = GameObject.Find("Objective5");
             targetPosition = Objective5.GetComponent<Transform>().position;
         }
         if (other.gameObject.name == "Objective5")
         {
+            Objective6 = GameObject.Find("Objective6");
             targetPosition = Objective6.GetComponent<Transform>().position;
-        }
-        if (other.gameObject.name == "Objective6")
-        {
-            targetPosition = Objective7.GetComponent<Transform>().position;
         }
         if (other.gameObject.name == "EndZone")
         {
-
             AudioManager.instance.PlaySFX("TroopSucceed");
             Destroy(gameObject);
         }
