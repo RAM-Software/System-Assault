@@ -19,6 +19,8 @@ public class Firewall : MonoBehaviour
     //Disable Towers Code
     [SerializeField] Base_Tower[] baseTowers;
     [SerializeField] Area_Tower[] areaTowers;
+    [SerializeField] ForwardSpawn newSpawnPoint;
+    [SerializeField] ForwardSpawn oldSpawnPoint;
     
 
     // Start is called before the first frame update
@@ -73,7 +75,16 @@ public class Firewall : MonoBehaviour
         {
             areaTowers[i].isCorrupted = false;
         }
+
+        //Forward spawn
+        newSpawnPoint.isActive = true;
+        oldSpawnPoint.isActive = false;
+        newSpawnPoint.IsActive();
+        oldSpawnPoint.IsActive();
+
         Destroy(gameObject, 0.35f);
+
+
 
     }
 }
