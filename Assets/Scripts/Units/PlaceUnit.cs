@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlaceUnit : MonoBehaviour, ITap
 {
@@ -59,7 +60,7 @@ public class PlaceUnit : MonoBehaviour, ITap
                 Debug.Log("Time is UP!");
                 TimeLeft = 0;
                 TimerOn = false;
-                //Load lose screen here
+                //SceneManager.LoadScene("LoseMenu");
             }
         }
         activeTroop = SelectUnit.currentTroop;

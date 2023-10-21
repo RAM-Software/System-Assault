@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndZone : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class EndZone : MonoBehaviour
 
         if (objectiveHealth <= 0)
         {
-            //Load Win Screen here
+            SceneManager.LoadScene("WinMenu");
         }
     }
 }
