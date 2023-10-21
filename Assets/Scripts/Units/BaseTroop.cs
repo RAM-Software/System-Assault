@@ -28,12 +28,16 @@ public class BaseTroop : MonoBehaviour
     //NavMesh Variables
     private NavMeshAgent troopAgent;
 
+    //Health bar
+    [SerializeField] UnitHealthBar healthBar;
+
     private void Awake()
     {
         troopAgent = GetComponent<NavMeshAgent>();
         currentHealth = maxHealth;
         Objective1 = GameObject.Find("Objective1");
         targetPosition = Objective1.GetComponent<Transform>().position;
+        healthBar = GetComponentInChildren<UnitHealthBar>();
     }
 
     // Update is called once per frame
@@ -80,6 +84,8 @@ public class BaseTroop : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth - amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+
+        healthBar.UpdateHealthBar(currentHealth, maxHealth);
 
 
         if (currentHealth > 0)

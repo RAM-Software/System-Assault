@@ -21,7 +21,10 @@ public class Firewall : MonoBehaviour
     [SerializeField] Area_Tower[] areaTowers;
     [SerializeField] ForwardSpawn newSpawnPoint;
     [SerializeField] ForwardSpawn oldSpawnPoint;
-    
+
+    //Health bar
+    [SerializeField] UnitHealthBar healthBar;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,7 @@ public class Firewall : MonoBehaviour
 
         //Audio code
         audioSource = GetComponent<AudioSource>();
+        healthBar = GetComponentInChildren<UnitHealthBar>();
 
     }
 
@@ -37,6 +41,8 @@ public class Firewall : MonoBehaviour
     {
         wallCurrentHealth = Mathf.Clamp(wallCurrentHealth - amount, 0, wallMaxHealth);
         Debug.Log(wallCurrentHealth + "/" + wallMaxHealth);
+
+        healthBar.UpdateHealthBar(wallCurrentHealth, wallMaxHealth);
 
 
         if (wallCurrentHealth > 0)

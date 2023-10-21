@@ -161,6 +161,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1572511558432081523, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2230992679343230426, guid: f17a3b7a738940648a87357b7ff7339a,
         type: 3}
       propertyPath: m_RootOrder
@@ -1928,6 +1943,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1572511558432081523, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2230992679343230426, guid: f17a3b7a738940648a87357b7ff7339a,
         type: 3}
       propertyPath: m_RootOrder
@@ -2929,6 +2959,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1572511558432081523, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2230992679343230426, guid: f17a3b7a738940648a87357b7ff7339a,
         type: 3}
       propertyPath: m_RootOrder
@@ -3152,6 +3197,21 @@ PrefabInstance:
     - target: {fileID: 1566624476033996640, guid: f17a3b7a738940648a87357b7ff7339a,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572511558432081523, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2230992679343230426, guid: f17a3b7a738940648a87357b7ff7339a,
@@ -3978,6 +4038,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1572511558432081523, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2230992679343230426, guid: f17a3b7a738940648a87357b7ff7339a,
         type: 3}
       propertyPath: m_RootOrder
@@ -4307,6 +4382,21 @@ PrefabInstance:
     - target: {fileID: 1566624476033996640, guid: f17a3b7a738940648a87357b7ff7339a,
         type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1572511558432081523, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2147024553540209470, guid: f17a3b7a738940648a87357b7ff7339a,
+        type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2230992679343230426, guid: f17a3b7a738940648a87357b7ff7339a,
