@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class HUDButtons : MonoBehaviour
 {
     public bool gamePaused;
@@ -60,6 +60,12 @@ public class HUDButtons : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        ResumeGame();
     }
 
     public void ShowTroops()
