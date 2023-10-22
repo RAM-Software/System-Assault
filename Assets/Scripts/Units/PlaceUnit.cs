@@ -60,7 +60,7 @@ public class PlaceUnit : MonoBehaviour, ITap
                 Debug.Log("Time is UP!");
                 TimeLeft = 0;
                 TimerOn = false;
-                //SceneManager.LoadScene("LoseMenu");
+                SceneManager.LoadScene("LoseMenu");
             }
         }
         activeTroop = SelectUnit.currentTroop;

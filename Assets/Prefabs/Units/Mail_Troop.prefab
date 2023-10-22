@@ -16,17 +16,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: d845e94a73d945a42955cdc9957997a1,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d845e94a73d945a42955cdc9957997a1,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d845e94a73d945a42955cdc9957997a1,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d845e94a73d945a42955cdc9957997a1,
         type: 3}
@@ -158,6 +158,7 @@ MonoBehaviour:
   attackDamage: 20
   timeBetweenAttacks: 2
   endGoalDamage: 2
+  healthBar: {fileID: 0}
 --- !u!195 &2121671014797957203
 NavMeshAgent:
   m_ObjectHideFlags: 0

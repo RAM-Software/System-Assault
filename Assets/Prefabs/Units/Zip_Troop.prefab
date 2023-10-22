@@ -16,17 +16,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 87079e0fb31617546abeca3b8595f532,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87079e0fb31617546abeca3b8595f532,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87079e0fb31617546abeca3b8595f532,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.03
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 87079e0fb31617546abeca3b8595f532,
         type: 3}
@@ -188,6 +188,7 @@ MonoBehaviour:
   endGoalDamage: 3
   JunkTrooper: {fileID: 3392431046632838094, guid: b0df7ce620203f541aa29d827f1d4d43,
     type: 3}
+  healthBar: {fileID: 0}
 --- !u!65 &6709620484155681996
 BoxCollider:
   m_ObjectHideFlags: 0
