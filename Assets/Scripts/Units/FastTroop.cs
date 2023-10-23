@@ -127,6 +127,11 @@ public class FastTroop : MonoBehaviour
             Objective6 = GameObject.Find("Objective6");
             targetPosition = Objective6.GetComponent<Transform>().position;
         }
+        if (other.gameObject.name == "Objective6")
+        {
+            Objective6 = GameObject.Find("EndZone");
+            targetPosition = Objective6.GetComponent<Transform>().position;
+        }
         if (other.gameObject.name == "EndZone")
         {
             AudioManager.instance.PlaySFX("TroopSucceed");

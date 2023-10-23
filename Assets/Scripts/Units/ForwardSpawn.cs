@@ -9,7 +9,7 @@ public class ForwardSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        IsActive();
     }
 
     // Update is called once per frame
