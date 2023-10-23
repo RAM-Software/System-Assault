@@ -39,7 +39,7 @@ public class TouchManager : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider != null)
+            if (hit.collider.tag != ("Untouchable"))
             {
                 ITap tap = hit.collider.GetComponent<ITap>();
                 if (tap != null)

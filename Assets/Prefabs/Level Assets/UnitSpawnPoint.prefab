@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9180430776612631114}
   m_Layer: 0
   m_Name: UnitSpawnPoint
-  m_TagString: Untagged
+  m_TagString: Untouchable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,5 +297,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
-  m_Center: {x: 0.00000029802322, y: 0, z: -0.000000014901161}
+  m_Size: {x: 1.0000001, y: 13.308083, z: 1.0000002}
+  m_Center: {x: 0.0000002724784, y: 5.6540413, z: -1.6875312e-15}
