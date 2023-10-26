@@ -52,6 +52,8 @@ public class CameraController : MonoBehaviour
     private Vector3 zoomTargetPosition;
     private float currentZoom;
 
+    public float clampXMin, clampXMax, clampYMin, clampYMax, clampZMin, clampZMax;
+
 
     private void Awake()
     {
@@ -125,6 +127,13 @@ public class CameraController : MonoBehaviour
             {
                 Vector3 direction = touchStart - Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 Camera.main.transform.position += direction;
+
+                Vector3 clampedPosition = Camera.main.transform.position;
+
+                clampedPosition.x = Mathf.Clamp(clampedPosition.x, clampXMin, clampXMax);
+                clampedPosition.y = Mathf.Clamp(clampedPosition.y, clampYMin, clampYMax);
+                clampedPosition.z = Mathf.Clamp(clampedPosition.z, clampZMin, clampZMax);
+                Camera.main.transform.position = clampedPosition;
             }
             zoom(Input.GetAxis("Mouse ScrollWheel") * zoomSpeed);
         }

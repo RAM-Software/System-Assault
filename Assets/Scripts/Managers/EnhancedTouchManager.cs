@@ -50,8 +50,7 @@ public class EnhancedTouchManager : MonoBehaviour
         //Calculates new camera position
         Vector3 newPosition = new Vector3(-touch.delta.normalized.x, 0, -touch.delta.normalized.y) * Time.deltaTime * touchSpeed;
 
-        //Passes new location to CameraController Move function
-        CameraController.Instance?.Move(newPosition);
+        
     }    
 
     private void ZoomCamera(Touch firstTouch, Touch secondTouch)
@@ -72,7 +71,6 @@ public class EnhancedTouchManager : MonoBehaviour
         float newMultiTouchDistance = Vector2.Distance(firstTouch.screenPosition, secondTouch.screenPosition);
 
         //Tells Zoom function if zooming in or out
-        CameraController.Instance?.Zoom(newMultiTouchDistance < lastMultiTouchDistance);
 
         //Resets lastMultiTouchDistance
         lastMultiTouchDistance = newMultiTouchDistance;
