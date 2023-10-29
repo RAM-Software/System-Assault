@@ -6,6 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject MainButtons;
     public GameObject LevelSelectButtons;
+    public GameObject Shop;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class MainMenu : MonoBehaviour
     {
         MainButtons.SetActive(true);
         LevelSelectButtons.SetActive(false);
+        Shop.SetActive(false);
     }
 
     public void LevelSelectMenu()
@@ -64,5 +66,11 @@ public class MainMenu : MonoBehaviour
     public void LevelSelect5()
     {
         SceneManager.LoadScene("Level5Scene");
+    }
+
+    public void ShopMenu()
+    {
+        Shop.SetActive(true);
+        MainButtons.SetActive(false);
     }
 }

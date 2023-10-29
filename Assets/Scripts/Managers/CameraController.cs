@@ -15,10 +15,10 @@ public class CameraController : MonoBehaviour
 
     public Camera MyCamera { get; private set; }
 
-    
-
     public float clampXMin, clampXMax, clampYMin, clampYMax, clampZMin, clampZMax;
-
+    public float baseZoomOutMin = 1;
+    public float baseZoomOutMax = 10;
+    private float currentZoomLevel;
 
     private void Awake()
     {
@@ -32,17 +32,13 @@ public class CameraController : MonoBehaviour
             Destroy(gameObject);
             return;
         }*/
-
-        
     }
 
     private void Update()
     {
-       
-
         if (gameMode == 1)
         {
-
+            
 
             if (Input.GetMouseButtonDown(0))
             {
@@ -76,7 +72,6 @@ public class CameraController : MonoBehaviour
                 Camera.main.transform.position = clampedPosition;
             }
             zoom(Input.GetAxis("Mouse ScrollWheel") * zoomSpeed);
-
         }
     }
 
@@ -85,6 +80,7 @@ public class CameraController : MonoBehaviour
         if (gameMode == 1)
         {
             Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
+            currentZoomLevel = Mathf.Clamp(Camera.main.orthographicSize, baseZoomOutMin, baseZoomOutMax);
         }
     }
 
@@ -99,6 +95,5 @@ public class CameraController : MonoBehaviour
             gameMode = 0;
         }
     }
-        
 }
 
