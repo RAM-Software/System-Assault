@@ -154,6 +154,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveMaxHealth: 20
+  bossWall: {fileID: 4452624264786286622, guid: 98b5f1974b22ede4bad0f645c1a73d01,
+    type: 3}
+  wallPosition1: {fileID: 0}
+  wallPosition2: {fileID: 0}
+  wallPosition3: {fileID: 0}
 --- !u!114 &2256949537877122774
 MonoBehaviour:
   m_ObjectHideFlags: 0

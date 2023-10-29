@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4899711761932997283}
   - component: {fileID: 5990670302523750847}
   - component: {fileID: 6920281919497795198}
+  - component: {fileID: 1588492340317209448}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3634198359493977388
 MonoBehaviour:
@@ -103,3 +104,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810b9d18e96ae1e49af447e863878f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1588492340317209448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877401979264018542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcfb55674957c94db62e68ddf53e55d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeLeft: 360
+  TimerOn: 0
+  TimerTxt: {fileID: 0}

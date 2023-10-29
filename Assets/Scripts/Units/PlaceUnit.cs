@@ -24,11 +24,6 @@ public class PlaceUnit : MonoBehaviour, ITap
     
     //Tutorialization
     public GameObject helperText;
-    
-    //Timer Variables
-    public float TimeLeft;
-    public bool TimerOn = false;
-    public TextMeshProUGUI TimerTxt;
 
 
     //Audio code
@@ -38,7 +33,6 @@ public class PlaceUnit : MonoBehaviour, ITap
     void Start()
     {
         //Starts passive currency generation
-        TimerOn = true;
         InvokeRepeating("currencyGain", 2.0f, 1.0f);
         currencyCount = currencyStartAmount;
         SetCurrencyText();
@@ -48,21 +42,6 @@ public class PlaceUnit : MonoBehaviour, ITap
     }
     void Update()
     {
-        if (TimerOn)
-        {
-            if (TimeLeft > 0)
-            {
-                TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
-            }
-            else
-            {
-                Debug.Log("Time is UP!");
-                TimeLeft = 0;
-                TimerOn = false;
-                SceneManager.LoadScene("LoseMenu");
-            }
-        }
         activeTroop = SelectUnit.currentTroop;
     }
 
@@ -144,16 +123,5 @@ public class PlaceUnit : MonoBehaviour, ITap
     public void PlaySound(AudioClip clip)
     {
        audioSource.PlayOneShot(clip);
-    }
-
-    //Timer Update
-    void updateTimer(float currentTime)
-    {
-        currentTime += 1;
-
-        float minutes = Mathf.FloorToInt(currentTime / 60);
-        float seconds = Mathf.FloorToInt(currentTime % 60);
-
-        TimerTxt.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
