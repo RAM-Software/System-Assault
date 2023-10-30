@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public int totalRAM;
     // Start is called before the first frame update
     public struct towerGroups
     {
         public GameObject[] towers;
         public bool isCorrupted;
-
     }
+
+
     void Start()
     {
         
@@ -21,5 +23,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void UpdateRAMAmount(int newTotal)
+    {
+        totalRAM = newTotal;
     }
 }

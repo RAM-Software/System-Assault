@@ -12,6 +12,7 @@ public class HUDButtons : MonoBehaviour
     public GameObject troopButtons;
     public GameObject volumeMenu;
     public GameObject showTroopsButton;
+    CameraController controller;
     //public GameObject menu;
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,7 @@ public class HUDButtons : MonoBehaviour
             gamePaused = true;
             AudioListener.pause = true;
             pauseMenu.SetActive(true);
+            troopButtons.SetActive(false);
             //canvas.alpha = 1;
             //canvas.interactable = true;
             //canvas.blocksRaycasts = true;
@@ -53,6 +55,7 @@ public class HUDButtons : MonoBehaviour
         gamePaused = false;
         AudioListener.pause = false;
         pauseMenu.SetActive(false);
+        troopButtons.SetActive(true);
         //canvas.alpha = 0;
         //canvas.interactable = false;
         //canvas.blocksRaycasts = false;

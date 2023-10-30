@@ -15,6 +15,8 @@ public class EndZone : MonoBehaviour
     public Transform wallPosition3;
     public float wallSpawnTime;
     public TextMeshProUGUI bossHealthText;
+    public int currentRamAmount;
+    public int rewardRamAmount;
 
     GameObject wall1;
     GameObject wall2;
@@ -25,6 +27,7 @@ public class EndZone : MonoBehaviour
         InvokeRepeating("bossWalls", 15.0f, 40.0f);
         objectiveHealth = objectiveMaxHealth;
         SetBossText();
+        currentRamAmount = PlayerPrefs.GetInt("Ram");
     }
 
     // Update is called once per frame
@@ -39,14 +42,10 @@ public class EndZone : MonoBehaviour
         objectiveHealth = Mathf.Clamp(objectiveHealth - amount, 0, objectiveMaxHealth);
         Debug.Log(objectiveHealth + "/" + objectiveMaxHealth);
 
-
-        if (objectiveHealth > 0)
-        {
-
-        }
-
         if (objectiveHealth <= 0)
         {
+            currentRamAmount += rewardRamAmount;
+            PlayerPrefs.SetInt("Ram", currentRamAmount);
             SceneManager.LoadScene("WinMenu");
         }
         SetBossText();

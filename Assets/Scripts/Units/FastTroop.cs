@@ -31,6 +31,8 @@ public class FastTroop : MonoBehaviour
     //Health bar
     [SerializeField] UnitHealthBar healthBar;
 
+    //Upgrades
+    public int upgradeLevel;
 
     private void Awake()
     {
@@ -39,6 +41,20 @@ public class FastTroop : MonoBehaviour
         Objective1 = GameObject.Find("Objective1");
         targetPosition = Objective1.GetComponent<Transform>().position;
         healthBar = GetComponentInChildren<UnitHealthBar>();
+        upgradeLevel = PlayerPrefs.GetInt("EmailUpgrades");
+
+        switch (upgradeLevel)
+        {
+            case 2:
+                troopAgent.speed = 17;
+                break;
+            case 3:
+                troopAgent.speed = 20;
+                break;
+            default:
+                troopAgent.speed = 15;
+                break;
+        }
     }
 
     // Update is called once per frame

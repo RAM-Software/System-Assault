@@ -16,7 +16,10 @@ public class BaseTroop : MonoBehaviour
     GameObject Objective7;
 
     //Health Variables
-    public int maxHealth = 50;
+    public int maxHealth;
+    public int baseMaxHealth = 50;
+    public int upgradeOneHealth = 70;
+    public int finalUpgradeHealth = 100;
     int currentHealth;
 
     //Attack Variables
@@ -31,13 +34,32 @@ public class BaseTroop : MonoBehaviour
     //Health bar
     [SerializeField] UnitHealthBar healthBar;
 
+    //Upgrades
+    public int upgradeLevel;
+
     private void Awake()
     {
         troopAgent = GetComponent<NavMeshAgent>();
-        currentHealth = maxHealth;
         Objective1 = GameObject.Find("Objective1");
         targetPosition = Objective1.GetComponent<Transform>().position;
         healthBar = GetComponentInChildren<UnitHealthBar>();
+        upgradeLevel = PlayerPrefs.GetInt("JunkUpgrades");
+        
+        switch(upgradeLevel)
+        {
+            case 2:
+                maxHealth = upgradeOneHealth;
+                break;
+            case 3:
+                maxHealth = finalUpgradeHealth;
+                break;
+            default:
+                maxHealth = baseMaxHealth;
+                break;
+        }
+
+        currentHealth = maxHealth;
+
     }
 
     // Update is called once per frame
@@ -86,12 +108,6 @@ public class BaseTroop : MonoBehaviour
         Debug.Log(currentHealth + "/" + maxHealth);
 
         healthBar.UpdateHealthBar(currentHealth, maxHealth);
-
-
-        if (currentHealth > 0)
-        {
-
-        }
 
         if (currentHealth <= 0)
         {
