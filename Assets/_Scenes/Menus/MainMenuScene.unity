@@ -808,6 +808,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 322824892934163135, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -53
+      objectReference: {fileID: 0}
     - target: {fileID: 906156740256928240, guid: 0727468a36b21b04a859fc0f39ebed20,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1026,6 +1031,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4320849044279811129, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 90.5187
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320849044279811129, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 67.8782
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320849044279811129, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 9.919331
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320849044279811129, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.7645717
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320849044279811129, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.7645717
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320849044279811129, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320849044279811129, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 4513393014575531807, guid: 0727468a36b21b04a859fc0f39ebed20,
         type: 3}
       propertyPath: m_fontAsset
@@ -1068,6 +1108,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5915140849137181536, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.7923355
+      objectReference: {fileID: 0}
     - target: {fileID: 6244853089088352557, guid: 0727468a36b21b04a859fc0f39ebed20,
         type: 3}
       propertyPath: m_fontAsset
@@ -1078,6 +1123,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6378269400744136751, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.7923355
       objectReference: {fileID: 0}
     - target: {fileID: 7465547684164546862, guid: 0727468a36b21b04a859fc0f39ebed20,
         type: 3}
