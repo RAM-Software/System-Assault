@@ -160,11 +160,12 @@ MonoBehaviour:
     type: 3}
   Objective7: {fileID: 2436656724542074199, guid: 64b1e3484c33da04281c8a87e4e367f4,
     type: 3}
-  maxHealth: 40
-  attackDamage: 20
+  maxHealth: 20
+  attackDamage: 40
   timeBetweenAttacks: 2
   endGoalDamage: 2
   healthBar: {fileID: 0}
+  upgradeLevel: 0
 --- !u!195 &2121671014797957203
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -248,8 +249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 3555134654809180600}
-  camera: {fileID: 0}
-  target: {fileID: 1839479814879752104}
   offset: {x: 0, y: 0, z: 0}
 --- !u!4 &1839479814879752104 stripped
 Transform:

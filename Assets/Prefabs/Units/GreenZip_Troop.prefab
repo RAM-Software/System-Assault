@@ -188,13 +188,14 @@ MonoBehaviour:
     type: 3}
   Objective7: {fileID: 2436656724542074199, guid: 64b1e3484c33da04281c8a87e4e367f4,
     type: 3}
-  maxHealth: 200
+  maxHealth: 125
   attackDamage: 5
   timeBetweenAttacks: 2
   endGoalDamage: 3
   JunkTrooper: {fileID: 3392431046632838094, guid: b0df7ce620203f541aa29d827f1d4d43,
     type: 3}
   healthBar: {fileID: 0}
+  upgradeLevel: 0
 --- !u!65 &6709620484155681996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -256,8 +257,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 8394899271112896474}
-  camera: {fileID: 0}
-  target: {fileID: 378755872673614438}
   offset: {x: 0, y: 0, z: 0}
 --- !u!1001 &4155319170017499169
 PrefabInstance:

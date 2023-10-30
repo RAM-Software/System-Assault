@@ -219,11 +219,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
-  maxHealth: 80
-  attackDamage: 10
+  maxHealth: 40
+  baseMaxHealth: 25
+  upgradeOneHealth: 70
+  finalUpgradeHealth: 100
+  attackDamage: 20
   timeBetweenAttacks: 2
   endGoalDamage: 1
   healthBar: {fileID: 0}
+  upgradeLevel: 0
 --- !u!1001 &4686790722010795534
 PrefabInstance:
   m_ObjectHideFlags: 0
