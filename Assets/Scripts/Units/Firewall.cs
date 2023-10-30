@@ -7,7 +7,7 @@ public class Firewall : MonoBehaviour
 {
     public int wallMaxHealth = 100;
     public int wallCurrentHealth;
-    public int wallGold = 300;
+    public int wallGold;
     public string hubTag = "SpawnZone";
 
 
@@ -59,6 +59,7 @@ public class Firewall : MonoBehaviour
             AudioManager.instance.PlaySFX("WallDestroyed");
 
             PlaceUnit.currencyCount = PlaceUnit.currencyCount + wallGold;
+            Debug.Log("Gold For You");
             DestroyTower();
         }
     }
