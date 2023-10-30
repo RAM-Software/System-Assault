@@ -455,7 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f8553fef457dc45a01c73bec592395, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 30
+  range: 50
   fireRate: 0.4
   partToRotate: {fileID: 0}
   projectilePrefab: {fileID: 4527051530949364421, guid: f509f4cc267777f468e7043b341482c3,

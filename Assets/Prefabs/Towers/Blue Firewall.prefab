@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   wallMaxHealth: 300
   wallCurrentHealth: 0
-  wallGold: 300
+  wallGold: 100
   hubTag: SpawnZone
   walldamagedClip: {fileID: 8300000, guid: a5948d5129d710a4294dd92471647812, type: 3}
   walldestroyedClip: {fileID: 8300000, guid: 143d8a400c8063a4ab4f1de1fe29de65, type: 3}
