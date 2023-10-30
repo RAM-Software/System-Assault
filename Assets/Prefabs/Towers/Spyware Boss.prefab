@@ -112,6 +112,8 @@ MonoBehaviour:
   wallPosition3: {fileID: 0}
   wallSpawnTime: 0
   bossHealthText: {fileID: 0}
+  currentRamAmount: 0
+  rewardRamAmount: 0
 --- !u!114 &2256949537877122774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142,7 +144,8 @@ AudioSource:
   m_GameObject: {fileID: 2090767290872184500}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 3958387702638005893, guid: 6d56d28209f8b3249afb507d5d043bbe,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.1
