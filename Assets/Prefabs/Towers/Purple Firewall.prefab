@@ -232,9 +232,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0b529864529c7499459fbfb95c14ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallMaxHealth: 300
+  wallMaxHealth: 1500
   wallCurrentHealth: 0
-  wallGold: 300
+  wallGold: 500
   hubTag: SpawnZone
   walldamagedClip: {fileID: 8300000, guid: a5948d5129d710a4294dd92471647812, type: 3}
   walldestroyedClip: {fileID: 8300000, guid: 143d8a400c8063a4ab4f1de1fe29de65, type: 3}
@@ -352,8 +352,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 1810832826802462898}
-  camera: {fileID: 0}
-  target: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
 --- !u!4 &2230992679343230426 stripped
 Transform:
