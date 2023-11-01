@@ -12,10 +12,16 @@ public class timerGoldManager : MonoBehaviour
     public bool TimerOn = false;
     public TextMeshProUGUI TimerTxt;
 
+    public AudioSource normalMusic;
+    public AudioSource rushMusic;
+
     // Start is called before the first frame update
     void Start()
     {
         TimerOn = true;
+
+        normalMusic.enabled = true;
+        rushMusic.enabled = false;
     }
 
     // Update is called once per frame
@@ -27,6 +33,12 @@ public class timerGoldManager : MonoBehaviour
             {
                 TimeLeft -= Time.deltaTime;
                 updateTimer(TimeLeft);
+
+                if (TimeLeft < 120)
+                {
+                    rushMusic.enabled = true;
+                    normalMusic.enabled = false;
+                }
             }
             else
             {

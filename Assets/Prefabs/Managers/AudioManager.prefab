@@ -74,6 +74,9 @@ MonoBehaviour:
   - clipName: TroopSucceed
     audio: {fileID: 8300000, guid: 230d467d638dafe439006bda358dac89, type: 3}
     isLoop: 0
+  - clipName: MusicTransition
+    audio: {fileID: 8300000, guid: 1cbd1dfca498933498561a3e4096c652, type: 3}
+    isLoop: 0
   musicClip:
   - clipName: 
     audio: {fileID: 0}
