@@ -178,9 +178,6 @@ MonoBehaviour:
   currencyStartAmount: 700
   currencyText: {fileID: 0}
   helperText: {fileID: 0}
-  TimeLeft: 360
-  TimerOn: 0
-  TimerTxt: {fileID: 0}
   troopsummonClip: {fileID: 8300000, guid: c32fedc7d4ca4ff4bb0e9210ae9c0765, type: 3}
 --- !u!82 &1079467496625225307
 AudioSource:
