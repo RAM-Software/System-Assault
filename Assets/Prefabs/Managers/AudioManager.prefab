@@ -32,7 +32,7 @@ Transform:
   - {fileID: 1181841020230361201}
   - {fileID: 3235911635791826755}
   m_Father: {fileID: 0}
-  m_RootOrder: 43
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3346115757913263633
 MonoBehaviour:
@@ -76,6 +76,9 @@ MonoBehaviour:
     isLoop: 0
   - clipName: MusicTransition
     audio: {fileID: 8300000, guid: 1cbd1dfca498933498561a3e4096c652, type: 3}
+    isLoop: 0
+  - clipName: VirusDamaged
+    audio: {fileID: 8300000, guid: c32fedc7d4ca4ff4bb0e9210ae9c0765, type: 3}
     isLoop: 0
   musicClip:
   - clipName: 

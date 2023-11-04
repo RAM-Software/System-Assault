@@ -42,6 +42,8 @@ public class EndZone : MonoBehaviour
         objectiveHealth = Mathf.Clamp(objectiveHealth - amount, 0, objectiveMaxHealth);
         Debug.Log(objectiveHealth + "/" + objectiveMaxHealth);
 
+        AudioManager.instance.PlaySFX("VirusDamaged"); // Plays sound if boss takes damage
+
         if (objectiveHealth <= 0)
         {
             currentRamAmount += rewardRamAmount;
