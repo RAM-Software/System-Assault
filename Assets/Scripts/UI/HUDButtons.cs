@@ -6,12 +6,19 @@ public class HUDButtons : MonoBehaviour
 {
     public bool gamePaused;
     public bool troopsVisible;
+    public bool junkInfoVisible;
+    public bool mailInfoVisible;
+    public bool zipInfoVisible;
     public bool volumeShown;
     CanvasGroup canvas;
     public GameObject pauseMenu;
     public GameObject troopButtons;
     public GameObject volumeMenu;
     public GameObject showTroopsButton;
+    public GameObject JunkInfo;
+    public GameObject MailInfo;
+    public GameObject ZipInfo;
+    public GameObject LevelInfoText;
     //public GameObject menu;
     // Start is called before the first frame update
     void Start()
@@ -20,12 +27,18 @@ public class HUDButtons : MonoBehaviour
         gamePaused = false;
         volumeShown = false;
         canvas = GetComponent<CanvasGroup>();
+        Invoke("turnOffLevelInfo", 5.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
 
+    }
+
+    public void turnOffLevelInfo()
+    {
+        LevelInfoText.SetActive(false);
     }
 
     public void PauseGame()
@@ -55,6 +68,9 @@ public class HUDButtons : MonoBehaviour
         AudioListener.pause = false;
         pauseMenu.SetActive(false);
         troopButtons.SetActive(true);
+        JunkInfo.SetActive(false);
+        MailInfo.SetActive(false);
+        ZipInfo.SetActive(false);
         //canvas.alpha = 0;
         //canvas.interactable = false;
         //canvas.blocksRaycasts = false;
@@ -81,6 +97,9 @@ public class HUDButtons : MonoBehaviour
         {
             troopButtons.SetActive(true);
             troopsVisible = true;
+            JunkInfo.SetActive(false);
+            MailInfo.SetActive(false);
+            ZipInfo.SetActive(false);
         }
         else if (troopsVisible == true)
         {
@@ -103,6 +122,48 @@ public class HUDButtons : MonoBehaviour
             volumeMenu.SetActive(false);
             volumeShown = false;
             pauseMenu.SetActive(true);
+        }
+    }
+
+    public void junkInfoButton()
+    {
+        if (junkInfoVisible == false)
+        {
+            JunkInfo.SetActive(true);
+            junkInfoVisible = true;
+        }
+        else if (junkInfoVisible == true)
+        {
+            JunkInfo.SetActive(false);
+            junkInfoVisible = false;
+        }
+    }
+
+    public void mailInfoButton()
+    {
+        if (mailInfoVisible == false)
+        {
+            MailInfo.SetActive(true);
+            mailInfoVisible = true;
+        }
+        else if (mailInfoVisible == true)
+        {
+            MailInfo.SetActive(false);
+            mailInfoVisible = false;
+        }
+    }
+
+    public void zipInfoButton()
+    {
+        if (zipInfoVisible == false)
+        {
+            ZipInfo.SetActive(true);
+            zipInfoVisible = true;
+        }
+        else if (zipInfoVisible == true)
+        {
+            ZipInfo.SetActive(false);
+            zipInfoVisible = false;
         }
     }
 
