@@ -15,6 +15,8 @@ public class timerGoldManager : MonoBehaviour
     public AudioSource normalMusic;
     public AudioSource rushMusic;
 
+    private bool musicTransition = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +36,13 @@ public class timerGoldManager : MonoBehaviour
                 TimeLeft -= Time.deltaTime;
                 updateTimer(TimeLeft);
 
-                if (TimeLeft < 120)
+                if (TimeLeft < 120 && musicTransition == false)
                 {
                     rushMusic.enabled = true;
                     normalMusic.enabled = false;
+
+                    AudioManager.instance.PlaySFX("MusicTransition"); // Plays music transition sound
+                    musicTransition = true;
                 }
             }
             else
