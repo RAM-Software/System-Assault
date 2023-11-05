@@ -80,6 +80,9 @@ MonoBehaviour:
   - clipName: VirusDamaged
     audio: {fileID: 8300000, guid: c32fedc7d4ca4ff4bb0e9210ae9c0765, type: 3}
     isLoop: 0
+  - clipName: ShopPurchase
+    audio: {fileID: 8300000, guid: 4dab96a341d5f6a4398c965675d6c5ff, type: 3}
+    isLoop: 0
   musicClip:
   - clipName: 
     audio: {fileID: 0}

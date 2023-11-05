@@ -78,6 +78,9 @@ public class ShopMenu : MonoBehaviour
                     break;
                 ram -= junkUpgradeAmount;
                 junkUpgrades += 1;
+
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
                 break;
 
             case 1:
@@ -85,6 +88,9 @@ public class ShopMenu : MonoBehaviour
                     break;
                 ram -= junkUpgradeAmount;
                 junkUpgrades += 1;
+                
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
                 break;
 
             default:
@@ -104,6 +110,9 @@ public class ShopMenu : MonoBehaviour
                     break;
                 ram -= emailUpgradeAmount;
                 emailUpgrades += 1;
+                
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
                 break;
 
             case 1:
@@ -111,6 +120,9 @@ public class ShopMenu : MonoBehaviour
                     break;
                 ram -= emailUpgradeAmount;
                 emailUpgrades += 1;
+                
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
                 break;
 
             default:
@@ -130,6 +142,9 @@ public class ShopMenu : MonoBehaviour
                     break;
                 ram -= zipUpgradeAmount;
                 zipUpgrades += 1;
+                
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
                 break;
 
             case 1:
@@ -137,6 +152,9 @@ public class ShopMenu : MonoBehaviour
                     break;
                 ram -= zipUpgradeAmount;
                 zipUpgrades += 1;
+                
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
                 break;
 
             default:
