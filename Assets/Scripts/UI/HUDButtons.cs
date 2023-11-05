@@ -12,7 +12,6 @@ public class HUDButtons : MonoBehaviour
     public GameObject troopButtons;
     public GameObject volumeMenu;
     public GameObject showTroopsButton;
-    CameraController controller;
     //public GameObject menu;
     // Start is called before the first frame update
     void Start()

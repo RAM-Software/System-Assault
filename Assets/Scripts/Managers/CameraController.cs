@@ -13,27 +13,10 @@ public class CameraController : MonoBehaviour
     public float zoomSpeed;
     #endregion
 
-    public Camera MyCamera { get; private set; }
-
     public float clampXMin, clampXMax, clampYMin, clampYMax, clampZMin, clampZMax;
     public float baseZoomOutMin = 1;
     public float baseZoomOutMax = 10;
     private float currentZoomLevel;
-
-    private void Awake()
-    {
-        /*if(Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }*/
-    }
-
     private void Update()
     {
         if (gameMode == 1)
@@ -42,6 +25,7 @@ public class CameraController : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+
                 touchStart = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             }
             if (Input.touchCount == 2)
@@ -57,7 +41,7 @@ public class CameraController : MonoBehaviour
 
                 float difference = currentMagnitude - prevMagnitude;
 
-                zoom(difference * 0.01f);
+                zoom(difference * zoomSpeed);
             }
             else if (Input.GetMouseButton(0))
             {
@@ -66,11 +50,12 @@ public class CameraController : MonoBehaviour
 
                 Vector3 clampedPosition = Camera.main.transform.position;
 
-                clampedPosition.x = Mathf.Clamp(clampedPosition.x, clampXMin, clampXMax);
-                clampedPosition.y = Mathf.Clamp(clampedPosition.y, clampYMin, clampYMax);
-                clampedPosition.z = Mathf.Clamp(clampedPosition.z, clampZMin, clampZMax);
-                Camera.main.transform.position = clampedPosition;
+                //clampedPosition.x = Mathf.Clamp(clampedPosition.x, clampXMin, clampXMax);
+                //clampedPosition.y = Mathf.Clamp(clampedPosition.y, clampYMin, clampYMax);
+                //clampedPosition.z = Mathf.Clamp(clampedPosition.z, clampZMin, clampZMax);
+                //Camera.main.transform.position = clampedPosition;
             }
+            ClampCamera();
             zoom(Input.GetAxis("Mouse ScrollWheel") * zoomSpeed);
         }
     }
@@ -80,7 +65,7 @@ public class CameraController : MonoBehaviour
         if (gameMode == 1)
         {
             Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, zoomOutMin, zoomOutMax);
-            currentZoomLevel = Mathf.Clamp(Camera.main.orthographicSize, baseZoomOutMin, baseZoomOutMax);
+           // currentZoomLevel = Mathf.Clamp(Camera.main.orthographicSize, baseZoomOutMin, baseZoomOutMax);
         }
     }
 
@@ -94,6 +79,22 @@ public class CameraController : MonoBehaviour
         {
             gameMode = 0;
         }
+    }
+
+    private void ClampCamera()
+    {
+        Vector3 clampMovement = transform.position;
+        float CamSize = Camera.main.orthographicSize;
+        float aspect = Camera.main.aspect;
+
+
+        clampMovement.x = Mathf.Clamp(clampMovement.x, clampXMin + CamSize * aspect, clampXMax - CamSize * aspect);
+        clampMovement.y = Mathf.Clamp(clampMovement.y, clampYMin + CamSize, clampYMax - CamSize);
+        float halfCamSize = CamSize / 2.0f;
+        clampMovement.z = Mathf.Clamp(clampMovement.z, clampZMin + halfCamSize, clampZMax - halfCamSize);
+
+
+        transform.position = clampMovement;
     }
 }
 
