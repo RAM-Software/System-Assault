@@ -11,8 +11,12 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gamePaused = false;
         canvas = GetComponent<CanvasGroup>();
+    }
+
+    private void Awake()
+    {
+        gamePaused = false;
     }
 
     // Update is called once per frame
@@ -25,8 +29,8 @@ public class PauseMenu : MonoBehaviour
     {
         if (gamePaused == false)
         {
-            Time.timeScale = 0f;
             gamePaused = true;
+            Time.timeScale = 0f;
             AudioListener.pause = true;
             canvas.alpha = 1;
             canvas.interactable = true;
@@ -41,8 +45,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void ResumeGame()
     {
-        Time.timeScale = 1;
         gamePaused = false;
+        Time.timeScale = 1;
         AudioListener.pause = false;
         canvas.alpha = 0;
         canvas.interactable = false;

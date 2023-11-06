@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class CameraController : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class CameraController : MonoBehaviour
     public float clampXMin, clampXMax, clampYMin, clampYMax, clampZMin, clampZMax;
     private void Update()
     {
-        if (gameMode == 1)
+        if (!EventSystem.current.IsPointerOverGameObject())
         {
             
 

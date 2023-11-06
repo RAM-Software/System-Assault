@@ -29,6 +29,10 @@ public class HUDButtons : MonoBehaviour
         canvas = GetComponent<CanvasGroup>();
         Invoke("turnOffLevelInfo", 5.0f);
     }
+    private void Awake()
+    {
+        ResumeGame();
+    }
 
     // Update is called once per frame
     void Update()
@@ -45,11 +49,12 @@ public class HUDButtons : MonoBehaviour
     {
         if (gamePaused == false)
         {
-            Time.timeScale = 0f;
             gamePaused = true;
-            AudioListener.pause = true;
+            Time.timeScale = 0f;
+            //AudioListener.pause = true;
             pauseMenu.SetActive(true);
             troopButtons.SetActive(false);
+            LevelInfoText.SetActive(false);
             //canvas.alpha = 1;
             //canvas.interactable = true;
             //canvas.blocksRaycasts = true;
@@ -63,14 +68,15 @@ public class HUDButtons : MonoBehaviour
     }
     public void ResumeGame()
     {
-        Time.timeScale = 1;
         gamePaused = false;
-        AudioListener.pause = false;
+        Time.timeScale = 1;
+        //AudioListener.pause = false;
         pauseMenu.SetActive(false);
         troopButtons.SetActive(true);
         JunkInfo.SetActive(false);
         MailInfo.SetActive(false);
         ZipInfo.SetActive(false);
+        volumeMenu.SetActive(false);
         //canvas.alpha = 0;
         //canvas.interactable = false;
         //canvas.blocksRaycasts = false;

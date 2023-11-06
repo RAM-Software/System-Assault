@@ -3141,7 +3141,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3346115757913263633, guid: 68c9e7fcbe50558499930aa26e739d25,
+          type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SetSFX
         m_Mode: 0
@@ -3847,7 +3848,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3346115757913263633, guid: 68c9e7fcbe50558499930aa26e739d25,
+          type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SetMusic
         m_Mode: 0
@@ -6440,7 +6442,8 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3346115757913263633, guid: 68c9e7fcbe50558499930aa26e739d25,
+          type: 3}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: SetMaster
         m_Mode: 0
