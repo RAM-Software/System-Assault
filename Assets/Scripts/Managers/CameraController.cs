@@ -11,12 +11,10 @@ public class CameraController : MonoBehaviour
     public float zoomOutMin = 1;
     public float zoomOutMax = 10;
     public float zoomSpeed;
+    public float moveSpeed;
     #endregion
 
     public float clampXMin, clampXMax, clampYMin, clampYMax, clampZMin, clampZMax;
-    public float baseZoomOutMin = 1;
-    public float baseZoomOutMax = 10;
-    private float currentZoomLevel;
     private void Update()
     {
         if (gameMode == 1)
