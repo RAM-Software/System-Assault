@@ -112,6 +112,8 @@ public class BaseTroop : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            
+            AudioManager.instance.PlaySFX("TroopDefeated"); // Plays troop defeated sound on death
         }
     }
 

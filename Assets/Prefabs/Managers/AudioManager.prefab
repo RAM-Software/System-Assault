@@ -83,6 +83,9 @@ MonoBehaviour:
   - clipName: ShopPurchase
     audio: {fileID: 8300000, guid: 4dab96a341d5f6a4398c965675d6c5ff, type: 3}
     isLoop: 0
+  - clipName: TroopDefeated
+    audio: {fileID: 8300000, guid: 8c613fbd8554b8d45a919637f72f349b, type: 3}
+    isLoop: 0
   musicClip:
   - clipName: 
     audio: {fileID: 0}

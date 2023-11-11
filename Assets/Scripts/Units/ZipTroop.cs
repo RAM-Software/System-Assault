@@ -162,6 +162,8 @@ public class ZipTroop : MonoBehaviour
             }
          
             Destroy(gameObject);
+            
+            AudioManager.instance.PlaySFX("TroopDefeated"); // Plays troop defeated sound on death
         }
     }
 
