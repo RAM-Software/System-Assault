@@ -107,19 +107,19 @@ public class AudioManager : MonoBehaviour
     public void SetMaster(float slider)
     {
         _masterVol = slider;
-        _mixer.SetFloat("MasterVol", _masterVol);
-        PlayerPrefs.SetFloat("MasterVol", _masterVol);
+        _mixer.SetFloat("MasterVol", Mathf.Log10(_masterVol) * 20);
+        PlayerPrefs.SetFloat("MasterVol", Mathf.Log10(_masterVol) * 20);
     }
     public void SetMusic(float slider)
     {
         _musicVol = slider;
-        _mixer.SetFloat("MusicVol", _musicVol);
-        PlayerPrefs.SetFloat("MusicVol", _musicVol);
+        _mixer.SetFloat("MusicVol", Mathf.Log10(_musicVol) * 20);
+        PlayerPrefs.SetFloat("MusicVol", Mathf.Log10(_musicVol) * 20);
     }
     public void SetSFX(float slider)
     {
         _SFXVol = slider;
-        _mixer.SetFloat("SFXVol", _SFXVol);
-        PlayerPrefs.SetFloat("SFXVol", _SFXVol);
+        _mixer.SetFloat("SFXVol", Mathf.Log10(_SFXVol) * 20);
+        PlayerPrefs.SetFloat("SFXVol", Mathf.Log10(_SFXVol) * 20);
     }
 }
