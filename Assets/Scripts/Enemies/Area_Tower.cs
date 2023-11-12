@@ -68,12 +68,12 @@ public class Area_Tower : MonoBehaviour
         if (target == null)
             return;
 
-        /*Backup code in case quaternion rotation is needed
+        //Backup code in case quaternion rotation is needed
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = lookRotation.eulerAngles;
-        partToRotate.rotation = rotation;
-        */
+        partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
 
         if (fireCountdown <= 0f && isCorrupted) // Can only fire if isCorrupted is false and countdown is up
         {
