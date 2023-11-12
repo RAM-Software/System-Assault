@@ -28,6 +28,7 @@ public class HUDButtons : MonoBehaviour
         volumeShown = false;
         canvas = GetComponent<CanvasGroup>();
         Invoke("turnOffLevelInfo", 5.0f);
+
     }
     private void Awake()
     {
@@ -72,7 +73,7 @@ public class HUDButtons : MonoBehaviour
         Time.timeScale = 1;
         //AudioListener.pause = false;
         pauseMenu.SetActive(false);
-        troopButtons.SetActive(true);
+        //troopButtons.SetActive(true);
         JunkInfo.SetActive(false);
         MailInfo.SetActive(false);
         ZipInfo.SetActive(false);
