@@ -279,6 +279,11 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 913767975}
+    - target: {fileID: 3952323368440064491, guid: 55f7438268a1c324bac777c3c3531cbf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -12.999977
+      objectReference: {fileID: 0}
     - target: {fileID: 4124796292928269730, guid: 55f7438268a1c324bac777c3c3531cbf,
         type: 3}
       propertyPath: m_Camera
@@ -2947,6 +2952,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveMaxHealth: 20
+  bossWall: {fileID: 0}
+  wallPosition1: {fileID: 0}
+  wallPosition2: {fileID: 0}
+  wallPosition3: {fileID: 0}
+  wallSpawnTime: 0
+  bossHealthText: {fileID: 0}
+  currentRamAmount: 0
+  rewardRamAmount: 0
 --- !u!114 &747777887 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3326748558158931551, guid: dfe8337745024a94e880e995e105826f,
