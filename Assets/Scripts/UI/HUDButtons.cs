@@ -190,7 +190,8 @@ public class HUDButtons : MonoBehaviour
             isNormalSpeed = false;
             speedSelected.SetActive(true);
             Debug.Log("Double speed");
-            
+
+            AudioManager.instance.PlaySFX("SpeedUp");
         }
         else if (isNormalSpeed == false)
         {

@@ -86,6 +86,9 @@ MonoBehaviour:
   - clipName: TroopDefeated
     audio: {fileID: 8300000, guid: 8c613fbd8554b8d45a919637f72f349b, type: 3}
     isLoop: 0
+  - clipName: SpeedUp
+    audio: {fileID: 8300000, guid: a533d1a980cc2664ba1bdc327758db00, type: 3}
+    isLoop: 0
   musicClip:
   - clipName: 
     audio: {fileID: 0}
