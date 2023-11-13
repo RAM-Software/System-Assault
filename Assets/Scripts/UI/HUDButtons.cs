@@ -10,6 +10,7 @@ public class HUDButtons : MonoBehaviour
     public bool mailInfoVisible;
     public bool zipInfoVisible;
     public bool volumeShown;
+    public bool isNormalSpeed;
     CanvasGroup canvas;
     public GameObject pauseMenu;
     public GameObject troopButtons;
@@ -19,6 +20,8 @@ public class HUDButtons : MonoBehaviour
     public GameObject MailInfo;
     public GameObject ZipInfo;
     public GameObject LevelInfoText;
+    public GameObject speedUnselected;
+    public GameObject speedSelected;
     //public GameObject menu;
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,7 @@ public class HUDButtons : MonoBehaviour
         troopsVisible = false;
         gamePaused = false;
         volumeShown = false;
+        isNormalSpeed = true;
         canvas = GetComponent<CanvasGroup>();
         Invoke("turnOffLevelInfo", 5.0f);
 
@@ -171,6 +175,25 @@ public class HUDButtons : MonoBehaviour
         {
             ZipInfo.SetActive(false);
             zipInfoVisible = false;
+        }
+    }
+
+    public void GameSpeed()
+    {
+        if (isNormalSpeed)
+        {
+            Time.timeScale = 3;
+            isNormalSpeed = false;
+            speedSelected.SetActive(true);
+            Debug.Log("Double speed");
+            
+        }
+        else if (isNormalSpeed == false)
+        {
+            Time.timeScale = 1;
+            isNormalSpeed = true;
+            speedSelected.SetActive(false);
+            Debug.Log("Normal speed");
         }
     }
 
