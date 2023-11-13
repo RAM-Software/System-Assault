@@ -11,6 +11,7 @@ public class HUDButtons : MonoBehaviour
     public bool zipInfoVisible;
     public bool volumeShown;
     public bool isNormalSpeed;
+
     CanvasGroup canvas;
     public GameObject pauseMenu;
     public GameObject troopButtons;
@@ -22,6 +23,9 @@ public class HUDButtons : MonoBehaviour
     public GameObject LevelInfoText;
     public GameObject speedUnselected;
     public GameObject speedSelected;
+
+
+
     //public GameObject menu;
     // Start is called before the first frame update
     void Start()

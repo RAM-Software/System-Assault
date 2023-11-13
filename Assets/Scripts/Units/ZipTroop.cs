@@ -108,21 +108,21 @@ public class ZipTroop : MonoBehaviour
             {
                 clone1 = Instantiate(JunkTrooper, transform.position, transform.rotation);
                 clone2 = Instantiate(JunkTrooper, transform.position, transform.rotation);
-                clone3 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+                //clone3 = Instantiate(JunkTrooper, transform.position, transform.rotation);
                 BaseTroop cloneScript1 = clone1.GetComponent<BaseTroop>();
                 cloneScript1.targetPosition = targetPosition;
                 BaseTroop cloneScript2 = clone2.GetComponent<BaseTroop>();
                 cloneScript2.targetPosition = targetPosition;
-                BaseTroop cloneScript3 = clone3.GetComponent<BaseTroop>();
-                cloneScript3.targetPosition = targetPosition;
+                /*BaseTroop cloneScript3 = clone3.GetComponent<BaseTroop>();
+                cloneScript3.targetPosition = targetPosition;*/
             }
             else if (upgradeLevel >= 1)
             {
                 clone1 = Instantiate(JunkTrooper, transform.position, transform.rotation);
                 clone2 = Instantiate(JunkTrooper, transform.position, transform.rotation);
                 clone3 = Instantiate(JunkTrooper, transform.position, transform.rotation);
-                clone4 = Instantiate(JunkTrooper, transform.position, transform.rotation);
-                clone5 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+                /*clone4 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+                clone5 = Instantiate(JunkTrooper, transform.position, transform.rotation);*/
 
                 BaseTroop cloneScript1 = clone1.GetComponent<BaseTroop>();
                 cloneScript1.targetPosition = targetPosition;
@@ -130,10 +130,10 @@ public class ZipTroop : MonoBehaviour
                 cloneScript2.targetPosition = targetPosition;
                 BaseTroop cloneScript3 = clone3.GetComponent<BaseTroop>();
                 cloneScript3.targetPosition = targetPosition;
-                BaseTroop cloneScript4 = clone4.GetComponent<BaseTroop>();
+                /*BaseTroop cloneScript4 = clone4.GetComponent<BaseTroop>();
                 cloneScript4.targetPosition = targetPosition;
                 BaseTroop cloneScript5 = clone5.GetComponent<BaseTroop>();
-                cloneScript5.targetPosition = targetPosition;
+                cloneScript5.targetPosition = targetPosition;*/
             }
             else if (upgradeLevel >= 2)
             {
@@ -141,9 +141,9 @@ public class ZipTroop : MonoBehaviour
                 clone2 = Instantiate(JunkTrooper, transform.position, transform.rotation);
                 clone3 = Instantiate(JunkTrooper, transform.position, transform.rotation);
                 clone4 = Instantiate(JunkTrooper, transform.position, transform.rotation);
-                clone5 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+               /* clone5 = Instantiate(JunkTrooper, transform.position, transform.rotation);
                 clone6 = Instantiate(JunkTrooper, transform.position, transform.rotation);
-                clone7 = Instantiate(JunkTrooper, transform.position, transform.rotation);
+                clone7 = Instantiate(JunkTrooper, transform.position, transform.rotation);*/
 
                 BaseTroop cloneScript1 = clone1.GetComponent<BaseTroop>();
                 cloneScript1.targetPosition = targetPosition;
@@ -154,11 +154,11 @@ public class ZipTroop : MonoBehaviour
                 BaseTroop cloneScript4 = clone4.GetComponent<BaseTroop>();
                 cloneScript4.targetPosition = targetPosition;
                 BaseTroop cloneScript5 = clone5.GetComponent<BaseTroop>();
-                cloneScript5.targetPosition = targetPosition;
+               /*cloneScript5.targetPosition = targetPosition;
                 BaseTroop cloneScript6 = clone6.GetComponent<BaseTroop>();
                 cloneScript6.targetPosition = targetPosition;
                 BaseTroop cloneScript7 = clone7.GetComponent<BaseTroop>();
-                cloneScript7.targetPosition = targetPosition;
+                cloneScript7.targetPosition = targetPosition;*/
             }
          
             Destroy(gameObject);

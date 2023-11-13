@@ -16,12 +16,18 @@ public class ShopMenu : MonoBehaviour
     public static int emailUpgradeAmount;
     public static int zipUpgradeAmount;
 
-
+    public bool junkShopInfoShown;
+    public bool emailShopInfoShown;
+    public bool zipShopInfoShown;
 
     public TextMeshProUGUI ramText;
     public TextMeshProUGUI junkAmountText;
     public TextMeshProUGUI emailAmountText;
     public TextMeshProUGUI zipAmountText;
+
+    public GameObject junkShopInfo;
+    public GameObject emailShopInfo;
+    public GameObject zipShopInfo;
     // Start is called before the first frame update
     void Start()
     {
@@ -47,20 +53,20 @@ public class ShopMenu : MonoBehaviour
 
         if (emailUpgrades <= 0)
         {
-            emailUpgradeAmount = 15;
+            emailUpgradeAmount = 25;
         }
         else
         {
-            emailUpgradeAmount = 25;
+            emailUpgradeAmount = 45;
         }    
 
         if (zipUpgrades <= 0)
         {
-            zipUpgradeAmount = 20;
+            zipUpgradeAmount = 60;
         }
         else
         {
-            zipUpgradeAmount = 45;
+            zipUpgradeAmount = 100;
         }    
 
         junkAmountText.text = "-" + junkUpgradeAmount.ToString();
@@ -163,5 +169,45 @@ public class ShopMenu : MonoBehaviour
 
         PlayerPrefs.SetInt("Ram", ram);
         PlayerPrefs.SetInt("ZipUpgrades", zipUpgrades);
+    }
+
+    public void JunkShopInfo()
+    {
+        if (junkShopInfoShown == false)
+        {
+            junkShopInfo.SetActive(true);
+            junkShopInfoShown = true;
+        }
+        else if (junkShopInfoShown == true)
+        {
+            junkShopInfo.SetActive(false);
+            junkShopInfoShown = false;
+        }
+    }
+    public void EmailShopInfo()
+    {
+        if (emailShopInfoShown == false)
+        {
+            emailShopInfo.SetActive(true);
+            emailShopInfoShown = true;
+        }
+        else if (emailShopInfoShown == true)
+        {
+            emailShopInfo.SetActive(false);
+            emailShopInfoShown = false;
+        }
+    }
+    public void ZipShopInfo()
+    {
+        if (junkShopInfoShown == false)
+        {
+            junkShopInfo.SetActive(true);
+            junkShopInfoShown = true;
+        }
+        else if (junkShopInfoShown == true)
+        {
+            junkShopInfo.SetActive(false);
+            junkShopInfoShown = false;
+        }
     }
 }
