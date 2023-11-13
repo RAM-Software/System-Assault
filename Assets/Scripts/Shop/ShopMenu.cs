@@ -32,6 +32,15 @@ public class ShopMenu : MonoBehaviour
     void Start()
     {
         ram = PlayerPrefs.GetInt("Ram");
+
+        //junkUpgrades = 0;
+        //emailUpgrades = 0;
+        //zipUpgrades = 0;
+
+        //PlayerPrefs.SetInt("JunkUpgrades", junkUpgrades);
+        //PlayerPrefs.SetInt("EmailUpgrades", emailUpgrades);
+        //PlayerPrefs.SetInt("ZipUpgrades", zipUpgrades);
+
         junkUpgrades = PlayerPrefs.GetInt("JunkUpgrades");
         emailUpgrades = PlayerPrefs.GetInt("EmailUpgrades");
         zipUpgrades = PlayerPrefs.GetInt("ZipUpgrades");
