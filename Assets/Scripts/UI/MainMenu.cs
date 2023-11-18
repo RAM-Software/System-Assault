@@ -7,6 +7,8 @@ public class MainMenu : MonoBehaviour
     public GameObject MainButtons;
     public GameObject LevelSelectButtons;
     public GameObject Shop;
+    public GameObject Credits;
+    public GameObject Options;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,9 +26,13 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("SampleScene");
     }
 
-    public void Options()
+    public void OptionsMenu()
     {
-
+        Options.SetActive(true);
+        MainButtons.SetActive(false);
+        LevelSelectButtons.SetActive(false);
+        Shop.SetActive(false);
+        Credits.SetActive(false);
     }
     
     public void MainMenuSelect()
@@ -34,12 +40,24 @@ public class MainMenu : MonoBehaviour
         MainButtons.SetActive(true);
         LevelSelectButtons.SetActive(false);
         Shop.SetActive(false);
+        Credits.SetActive(false);
+        Options.SetActive(false);
     }
 
     public void LevelSelectMenu()
     {
         MainButtons.SetActive(false);
         LevelSelectButtons.SetActive(true);
+    }
+
+    public void CreditsMenu()
+    {
+        Credits.SetActive(true);
+        Options.SetActive(false);
+        MainButtons.SetActive(false);
+        LevelSelectButtons.SetActive(false);
+        Shop.SetActive(false);
+
     }
     
     public void QuitGame()

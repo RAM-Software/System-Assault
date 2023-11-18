@@ -208,15 +208,15 @@ public class ShopMenu : MonoBehaviour
     }
     public void ZipShopInfo()
     {
-        if (junkShopInfoShown == false)
+        if (zipShopInfoShown == false)
         {
-            junkShopInfo.SetActive(true);
-            junkShopInfoShown = true;
+            zipShopInfo.SetActive(true);
+            zipShopInfoShown = true;
         }
-        else if (junkShopInfoShown == true)
+        else if (zipShopInfoShown == true)
         {
-            junkShopInfo.SetActive(false);
-            junkShopInfoShown = false;
+            zipShopInfo.SetActive(false);
+            zipShopInfoShown = false;
         }
     }
 }
