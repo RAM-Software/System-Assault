@@ -14823,12 +14823,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: dd0ee01277f4f334dab2b2c5b2dc9670,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.04
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd0ee01277f4f334dab2b2c5b2dc9670,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.04
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: dd0ee01277f4f334dab2b2c5b2dc9670,
         type: 3}
@@ -15037,6 +15037,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetPosition: {x: 0, y: 0, z: 0}
+  Objective1: {fileID: 0}
+  Objective2: {fileID: 0}
+  Objective3: {fileID: 0}
+  Objective4: {fileID: 0}
+  Objective5: {fileID: 0}
+  Objective6: {fileID: 0}
+  Objective7: {fileID: 0}
+  Objective8: {fileID: 0}
+  Objective9: {fileID: 0}
+  Objective10: {fileID: 0}
+  Objective11: {fileID: 0}
+  Objective12: {fileID: 0}
+  Objective13: {fileID: 0}
+  Objective14: {fileID: 0}
+  Objective15: {fileID: 0}
+  Objective16: {fileID: 0}
+  Objective17: {fileID: 0}
+  Objective18: {fileID: 0}
+  Objective19: {fileID: 0}
+  Objective20: {fileID: 0}
+  Objective21: {fileID: 0}
+  Objective22: {fileID: 0}
+  Objective23: {fileID: 0}
+  Objective24: {fileID: 0}
+  Objective25: {fileID: 0}
+  Objective26: {fileID: 0}
+  Objective27: {fileID: 0}
+  Objective28: {fileID: 0}
+  Objective29: {fileID: 0}
+  Objective30: {fileID: 0}
+  Objective31: {fileID: 0}
+  Objective32: {fileID: 0}
+  Objective33: {fileID: 0}
+  Objective34: {fileID: 0}
+  Objective35: {fileID: 0}
+  Objective36: {fileID: 0}
+  Objective37: {fileID: 0}
+  Objective38: {fileID: 0}
+  Objective39: {fileID: 0}
+  Objective40: {fileID: 0}
+  Objective41: {fileID: 0}
   maxHealth: 80
   baseMaxHealth: 50
   upgradeOneHealth: 70

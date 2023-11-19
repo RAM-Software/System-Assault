@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebcfb55674957c94db62e68ddf53e55d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 360
+  startingTime: 360
   TimerOn: 0
   TimerTxt: {fileID: 0}
   normalMusic: {fileID: 5699086934433210047}
