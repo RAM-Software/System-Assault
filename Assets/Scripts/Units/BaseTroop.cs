@@ -159,7 +159,7 @@ public class BaseTroop : MonoBehaviour
         {
             Destroy(gameObject);
             
-            AudioManager.instance.PlaySFX("TroopDefeated"); // Plays troop defeated sound on death
+            //AudioManager.instance.PlaySFX("TroopDefeated"); // Plays troop defeated sound on death
         }
     }
 
