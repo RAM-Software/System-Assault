@@ -86,6 +86,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level5Scene");
     }
 
+    public void LevelSelectBossRush()
+    {
+        SceneManager.LoadScene("Gamemode");
+    }
+
     public void ShopMenu()
     {
         Shop.SetActive(true);
