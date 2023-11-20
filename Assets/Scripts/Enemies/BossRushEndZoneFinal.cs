@@ -43,6 +43,6 @@ public class BossRushEndZoneFinal : MonoBehaviour
     public void SetBossText()
     {
         // Update the count text with the current count.
-        bossHealthText.text = "Virus: " + objectiveHealth.ToString() + "/20";
+        bossHealthText.text = "Virus: " + objectiveHealth.ToString() + "/" + objectiveMaxHealth.ToString();
     }
 }

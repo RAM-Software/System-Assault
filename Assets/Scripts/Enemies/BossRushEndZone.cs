@@ -40,7 +40,7 @@ public class BossRushEndZone : MonoBehaviour
         {
             //Boss death code here
             timerGoldManager.TimeLeft = timerGoldManager.TimeLeft + BossTimeReward;
-            bossHealthText.text = "Virus: " + objectiveMaxHealth.ToString() + "/20";
+            bossHealthText.text = "Virus: " + objectiveMaxHealth.ToString() + "/" + objectiveMaxHealth.ToString();
             Destroy(gameObject);
         }
     }
@@ -48,6 +48,6 @@ public class BossRushEndZone : MonoBehaviour
     public void SetBossText()
     {
         // Update the count text with the current count.
-        bossHealthText.text = "Virus: " + objectiveHealth.ToString() + "/20";
+        bossHealthText.text = "Virus: " + objectiveHealth.ToString() + "/" + objectiveMaxHealth.ToString();
     }
 }
