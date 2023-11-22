@@ -92,8 +92,8 @@ public class Base_Tower : MonoBehaviour
         
         
         //Audio code
-        //PlaySound(towerShoot);
-        AudioManager.instance.PlaySFX("TowerShoot");
+        PlaySound(towerShoot);
+        //AudioManager.instance.PlaySFX("TowerShoot");
 
         if (projectile != null)
             projectile.Seek(target);

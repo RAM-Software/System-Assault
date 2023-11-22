@@ -133,7 +133,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 8143698422524114906}
   enemyTag: Enemy
-  cannontowerShoot: {fileID: 8300000, guid: 6412bba4cfb65c0428a3b5b4a80d9700, type: 3}
+  cannontowerShoot: {fileID: 8300000, guid: 19f3ec913dc4c954cab59d4f456aea96, type: 3}
   isCorrupted: 0
 --- !u!82 &4342606650309504005
 AudioSource:
