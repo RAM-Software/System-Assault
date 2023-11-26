@@ -14833,7 +14833,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.06
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -14936,7 +14936,7 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 4372414200860044646}
   enemyTag: Enemy
-  cannontowerShoot: {fileID: 8300000, guid: ce659bbe65c72d34bbb3700fd4f88712, type: 3}
+  cannontowerShoot: {fileID: 8300000, guid: 1dc07146e7ac540438290d9aba9a47cc, type: 3}
   isCorrupted: 0
 --- !u!4 &4302192450087202865 stripped
 Transform:
