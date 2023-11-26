@@ -65,6 +65,10 @@ public class BossProjectile : MonoBehaviour
             {
                 c.GetComponent<BaseTroop>().ChangeHealth(attackDamage);
             }
+            if (c.GetComponent<MP3Troop>())
+            {
+                c.GetComponent<MP3Troop>().ChangeHealth(attackDamage);
+            }
         }
         Destroy(gameObject);
     }

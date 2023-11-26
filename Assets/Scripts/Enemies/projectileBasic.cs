@@ -53,6 +53,11 @@ public class projectileBasic : MonoBehaviour
         {
             tanktroop.ChangeHealth(attackDamage);
         }
+        MP3Troop musictroop = other.gameObject.GetComponent<MP3Troop>();
+        if (musictroop != null)
+        {
+            musictroop.ChangeHealth(attackDamage);
+        }
         Destroy(gameObject);
     }
     
