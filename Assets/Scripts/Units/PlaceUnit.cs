@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlaceUnit : MonoBehaviour, ITap
 {
     //Spawn Setup
-    public GameObject normalUnit, fastUnit, tankUnit;
+    public GameObject normalUnit, fastUnit, tankUnit, mp3Unit;
     public Transform spawnPosition;
     public Transform spawnUnitPosition;
     public string activeTroop;
@@ -19,6 +19,7 @@ public class PlaceUnit : MonoBehaviour, ITap
     public int basicPrice = 50;
     public int fastPrice = 70;
     public int tankPrice = 150;
+    public int mp3Price = 125;
     public int currencyStartAmount = 500;
     public TextMeshProUGUI currencyText;
     
@@ -102,6 +103,24 @@ public class PlaceUnit : MonoBehaviour, ITap
                 AudioManager.instance.PlaySFX("FailSummon");
             }
         }
+        if (activeTroop == "MP3")
+        {
+            if (currencyCount >= mp3Price)
+            {
+
+
+                Instantiate(mp3Unit, spawnPosition.position, spawnUnitPosition.rotation);
+                currencyCount = currencyCount - mp3Price;
+                SetCurrencyText();
+
+                AudioManager.instance.PlaySFX("MP3TroopSummon");
+            }
+            else
+            {
+                AudioManager.instance.PlaySFX("FailSummon");
+            }
+        }
+    
     }
 
     //Passive Currency Gen

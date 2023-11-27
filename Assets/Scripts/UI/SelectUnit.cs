@@ -33,4 +33,10 @@ public class SelectUnit : MonoBehaviour
         Debug.Log(currentTroop);
     }
 
+    public void SetMP3Troop()
+    {
+        currentTroop = "MP3";
+        Debug.Log(currentTroop);
+    }
+
 }

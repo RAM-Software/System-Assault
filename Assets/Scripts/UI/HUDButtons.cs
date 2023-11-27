@@ -9,6 +9,7 @@ public class HUDButtons : MonoBehaviour
     public bool junkInfoVisible;
     public bool mailInfoVisible;
     public bool zipInfoVisible;
+    public bool mp3InfoVisible;
     public bool volumeShown;
     public bool isNormalSpeed;
 
@@ -20,6 +21,7 @@ public class HUDButtons : MonoBehaviour
     public GameObject JunkInfo;
     public GameObject MailInfo;
     public GameObject ZipInfo;
+    public GameObject mp3Info;
     public GameObject LevelInfoText;
     public GameObject speedUnselected;
     public GameObject speedSelected;
@@ -115,6 +117,7 @@ public class HUDButtons : MonoBehaviour
             JunkInfo.SetActive(false);
             MailInfo.SetActive(false);
             ZipInfo.SetActive(false);
+            mp3Info.SetActive(false);
         }
         else if (troopsVisible == true)
         {
@@ -179,6 +182,20 @@ public class HUDButtons : MonoBehaviour
         {
             ZipInfo.SetActive(false);
             zipInfoVisible = false;
+        }
+    }
+
+    public void mp3InfoButton()
+    {
+        if (mp3InfoVisible == false)
+        {
+            mp3Info.SetActive(true);
+            mp3InfoVisible = true;
+        }
+        else if (mp3InfoVisible == true)
+        {
+            mp3Info.SetActive(false);
+            mp3InfoVisible = false;
         }
     }
 
