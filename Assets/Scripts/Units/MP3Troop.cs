@@ -54,6 +54,8 @@ public class MP3Troop : MonoBehaviour
 
     //Attack Variables
     public int attackDamage = 5;
+    public int upgradeOneAttack = 7;
+    public int finalUpgradeAttack = 10;
     public float timeBetweenAttacks;
     bool alreadyAttacked;
     public int endGoalDamage;
@@ -68,6 +70,9 @@ public class MP3Troop : MonoBehaviour
     //Health bar
     [SerializeField] UnitHealthBar healthBar;
 
+    //Upgrades
+    public int upgradeLevel;
+
     private void Awake()
     {
         InvokeRepeating("musicBurst", musicBurstInterval, musicBurstInterval);
@@ -76,6 +81,21 @@ public class MP3Troop : MonoBehaviour
         Objective1 = GameObject.Find("Objective1");
         targetPosition = Objective1.GetComponent<Transform>().position;
         healthBar = GetComponentInChildren<UnitHealthBar>();
+        upgradeLevel = PlayerPrefs.GetInt("MP3Upgrades");
+
+        currentHealth = maxHealth;
+
+        switch (upgradeLevel)
+        {
+            case 2:
+                attackDamage = upgradeOneAttack;
+                break;
+            case 3:
+                attackDamage = finalUpgradeAttack;
+                break;
+            default:
+                break;
+        }
 
         currentHealth = maxHealth;
 

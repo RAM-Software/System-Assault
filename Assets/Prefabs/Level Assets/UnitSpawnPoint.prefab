@@ -162,20 +162,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62afa712f737b7144861d70925ea0024, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalUnit: {fileID: 3392431046632838094, guid: b0df7ce620203f541aa29d827f1d4d43,
+  normalUnit: {fileID: 3392431046632838094, guid: 4257f3b724d99e54e9a105a65ba78744,
     type: 3}
-  fastUnit: {fileID: 1354727560245212434, guid: 9b48abfc1fffac3498e879a2623edb33,
+  fastUnit: {fileID: 1354727560245212434, guid: 211c1b2df0ac3fb47ae42581ddea9c34,
     type: 3}
-  tankUnit: {fileID: 1011705561290215644, guid: 4c1ee03777d4bc64a9e42f4e9e1f413c,
+  tankUnit: {fileID: 1011705561290215644, guid: 186463fabd89d3d42a78b6ce5eca7c01,
     type: 3}
+  mp3Unit: {fileID: 3392431046632838094, guid: 7f77465e2727a9c45a6166c797740128, type: 3}
   spawnPosition: {fileID: 837793498930628838}
   spawnUnitPosition: {fileID: 837793498930628838}
   activeTroop: 
-  goldPerSecond: 15
+  goldPerSecond: 20
   basicPrice: 50
   fastPrice: 70
   tankPrice: 150
-  currencyStartAmount: 700
+  mp3Price: 125
+  currencyStartAmount: 350
   currencyText: {fileID: 0}
   helperText: {fileID: 0}
   troopsummonClip: {fileID: 8300000, guid: c32fedc7d4ca4ff4bb0e9210ae9c0765, type: 3}

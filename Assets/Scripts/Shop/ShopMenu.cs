@@ -10,24 +10,29 @@ public class ShopMenu : MonoBehaviour
     public int junkUpgrades;
     public int emailUpgrades;
     public int zipUpgrades;
+    public int mp3Upgrades;
 
     //Upgrade amounts
     public static int junkUpgradeAmount;
     public static int emailUpgradeAmount;
     public static int zipUpgradeAmount;
+    public static int mp3UpgradeAmount;
 
     public bool junkShopInfoShown;
     public bool emailShopInfoShown;
     public bool zipShopInfoShown;
+    public bool mp3ShopInfoShown;
 
     public TextMeshProUGUI ramText;
     public TextMeshProUGUI junkAmountText;
     public TextMeshProUGUI emailAmountText;
     public TextMeshProUGUI zipAmountText;
+    public TextMeshProUGUI mp3AmountText;
 
     public GameObject junkShopInfo;
     public GameObject emailShopInfo;
     public GameObject zipShopInfo;
+    public GameObject mp3ShopInfo;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +49,7 @@ public class ShopMenu : MonoBehaviour
         junkUpgrades = PlayerPrefs.GetInt("JunkUpgrades");
         emailUpgrades = PlayerPrefs.GetInt("EmailUpgrades");
         zipUpgrades = PlayerPrefs.GetInt("ZipUpgrades");
+        mp3Upgrades = PlayerPrefs.GetInt("MP3Upgrades");
     }
 
     // Update is called once per frame
@@ -76,11 +82,21 @@ public class ShopMenu : MonoBehaviour
         else
         {
             zipUpgradeAmount = 100;
-        }    
+        }
+
+        if (mp3Upgrades <= 0)
+        {
+            mp3UpgradeAmount = 30;
+        }
+        else
+        {
+            mp3UpgradeAmount = 40;
+        }
 
         junkAmountText.text = "-" + junkUpgradeAmount.ToString();
         emailAmountText.text = "-" + emailUpgradeAmount.ToString();
         zipAmountText.text = "-" + zipUpgradeAmount.ToString();
+        mp3AmountText.text = "-" + mp3UpgradeAmount.ToString();
 
     }
 
@@ -180,6 +196,38 @@ public class ShopMenu : MonoBehaviour
         PlayerPrefs.SetInt("ZipUpgrades", zipUpgrades);
     }
 
+    public void UpgradeMP3()
+    {
+        switch (mp3Upgrades)
+        {
+            case 0:
+                if (ram < mp3UpgradeAmount) //not enough
+                    break;
+                ram -= mp3UpgradeAmount;
+                mp3Upgrades += 1;
+
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
+                break;
+
+            case 1:
+                if (ram < mp3UpgradeAmount) //not enough
+                    break;
+                ram -= mp3UpgradeAmount;
+                mp3Upgrades += 1;
+
+                AudioManager.instance.PlaySFX("ShopPurchase"); // Plays sound when upgrade is purchased
+
+                break;
+
+            default:
+                break;
+        }
+
+        PlayerPrefs.SetInt("Ram", ram);
+        PlayerPrefs.SetInt("MP3Upgrades", mp3Upgrades);
+    }
+
     public void JunkShopInfo()
     {
         if (junkShopInfoShown == false)
@@ -217,6 +265,20 @@ public class ShopMenu : MonoBehaviour
         {
             zipShopInfo.SetActive(false);
             zipShopInfoShown = false;
+        }
+    }
+
+    public void MP3ShopInfo()
+    {
+        if (mp3ShopInfoShown == false)
+        {
+            mp3ShopInfo.SetActive(true);
+            mp3ShopInfoShown = true;
+        }
+        else if (mp3ShopInfoShown == true)
+        {
+            mp3ShopInfo.SetActive(false);
+            mp3ShopInfoShown = false;
         }
     }
 }
