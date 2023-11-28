@@ -89,6 +89,12 @@ MonoBehaviour:
   - clipName: SpeedUp
     audio: {fileID: 8300000, guid: a533d1a980cc2664ba1bdc327758db00, type: 3}
     isLoop: 0
+  - clipName: MP3Deflect
+    audio: {fileID: 8300000, guid: a75e39740eb5f8a4d87fa592719d31a6, type: 3}
+    isLoop: 0
+  - clipName: MP3TroopSummon
+    audio: {fileID: 8300000, guid: 07d3781222abebe40b2db03c5e4c4670, type: 3}
+    isLoop: 0
   musicClip:
   - clipName: 
     audio: {fileID: 0}

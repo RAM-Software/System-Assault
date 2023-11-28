@@ -91,6 +91,9 @@ public class MP3Troop : MonoBehaviour
     {
         Debug.Log("Burst Start");
         burstEffect.Play();
+
+        AudioManager.instance.PlaySFX("MP3Deflect");
+
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius, projectileLayer);
         foreach (Collider c in colliders)
         {
