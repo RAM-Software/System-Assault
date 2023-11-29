@@ -91,6 +91,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Gamemode");
     }
 
+    public void LevelSelectDLC()
+    {
+        SceneManager.LoadScene("DLC");
+    }
+
     public void ShopMenu()
     {
         Shop.SetActive(true);
