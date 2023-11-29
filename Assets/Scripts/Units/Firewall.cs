@@ -89,7 +89,7 @@ public class Firewall : MonoBehaviour
         newSpawnPoint.IsActive();
         oldSpawnPoint.IsActive();
 
-        Destroy(gameObject, 0.35f);
+        Destroy(gameObject);
 
 
 

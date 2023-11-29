@@ -15464,7 +15464,7 @@ PrefabInstance:
     - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
         type: 3}
       propertyPath: wallMaxHealth
-      value: 1500
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -54187,6 +54187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
         type: 3}
+      propertyPath: wallGold
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
       propertyPath: newSpawnPoint
       value: 
       objectReference: {fileID: 1383533190}
@@ -54195,6 +54200,11 @@ PrefabInstance:
       propertyPath: oldSpawnPoint
       value: 
       objectReference: {fileID: 1718698647}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
+      propertyPath: wallMaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -57063,6 +57073,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
         type: 3}
+      propertyPath: wallGold
+      value: 1250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
       propertyPath: newSpawnPoint
       value: 
       objectReference: {fileID: 1718698647}
@@ -57071,6 +57086,11 @@ PrefabInstance:
       propertyPath: oldSpawnPoint
       value: 
       objectReference: {fileID: 1763036192}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
+      propertyPath: wallMaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -58061,6 +58081,11 @@ PrefabInstance:
       propertyPath: currencyText
       value: 
       objectReference: {fileID: 1608522966}
+    - target: {fileID: 7847747421303245077, guid: 83bda38d21b986c4aa25259c0051622d,
+        type: 3}
+      propertyPath: goldPerSecond
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 9180430776612631114, guid: 83bda38d21b986c4aa25259c0051622d,
         type: 3}
       propertyPath: m_RootOrder
@@ -67239,6 +67264,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
         type: 3}
+      propertyPath: wallGold
+      value: 1750
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
       propertyPath: newSpawnPoint
       value: 
       objectReference: {fileID: 1383533190}
@@ -67247,6 +67277,11 @@ PrefabInstance:
       propertyPath: oldSpawnPoint
       value: 
       objectReference: {fileID: 1718698647}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
+      propertyPath: wallMaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -82680,6 +82715,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
         type: 3}
+      propertyPath: wallGold
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
       propertyPath: newSpawnPoint
       value: 
       objectReference: {fileID: 890184368}
@@ -82688,6 +82728,11 @@ PrefabInstance:
       propertyPath: oldSpawnPoint
       value: 
       objectReference: {fileID: 934597378}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
+      propertyPath: wallMaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -84701,6 +84746,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
         type: 3}
+      propertyPath: wallGold
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
       propertyPath: newSpawnPoint
       value: 
       objectReference: {fileID: 1763036192}
@@ -84709,6 +84759,11 @@ PrefabInstance:
       propertyPath: oldSpawnPoint
       value: 
       objectReference: {fileID: 890184368}
+    - target: {fileID: 6689937480335374192, guid: 97885201738a54444b71f8e63a696c7b,
+        type: 3}
+      propertyPath: wallMaxHealth
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
