@@ -10,6 +10,8 @@ public class Firewall : MonoBehaviour
     public int wallGold;
     public string hubTag = "SpawnZone";
 
+    private int comboCounter = 0;
+
 
     //Audio code
     AudioSource audioSource;
@@ -59,7 +61,7 @@ public class Firewall : MonoBehaviour
             AudioManager.instance.PlaySFX("WallDestroyed");
 
             PlaceUnit.currencyCount = PlaceUnit.currencyCount + wallGold;
-            Debug.Log("Gold For You");
+            //Debug.Log("Gold For You");
             DestroyTower();
         }
     }
@@ -89,7 +91,11 @@ public class Firewall : MonoBehaviour
         newSpawnPoint.IsActive();
         oldSpawnPoint.IsActive();
 
-        Destroy(gameObject);
+        
+        comboCounter = comboCounter + 1;
+        Debug.Log(comboCounter + "x Combo!");
+
+        Destroy(gameObject, 0.35f);
 
 
 
