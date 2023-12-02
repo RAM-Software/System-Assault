@@ -13,6 +13,9 @@ public class timerGoldManager : MonoBehaviour
     public bool TimerOn = false;
     public TextMeshProUGUI TimerTxt;
 
+
+    public float rushTime = 120;
+
     public AudioSource normalMusic;
     public AudioSource rushMusic;
 
@@ -37,13 +40,20 @@ public class timerGoldManager : MonoBehaviour
                 TimeLeft -= Time.deltaTime;
                 updateTimer(TimeLeft);
 
-                if (TimeLeft < 120 && musicTransition == false)
+                if (TimeLeft < rushTime && musicTransition == false)
                 {
                     rushMusic.enabled = true;
                     normalMusic.enabled = false;
 
                     AudioManager.instance.PlaySFX("MusicTransition"); // Plays music transition sound
                     musicTransition = true;
+                }
+                else if (TimeLeft > rushTime && musicTransition == true)
+                {
+                    rushMusic.enabled = false;
+                    normalMusic.enabled = true;
+
+                    musicTransition = false;
                 }
             }
             else

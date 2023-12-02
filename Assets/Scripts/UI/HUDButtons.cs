@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
+
 public class HUDButtons : MonoBehaviour
 {
     public bool gamePaused;
@@ -26,6 +28,10 @@ public class HUDButtons : MonoBehaviour
     public GameObject speedUnselected;
     public GameObject speedSelected;
 
+    public AudioMixer _mixer;
+
+    private float SFXVol;
+
 
 
     //public GameObject menu;
@@ -39,6 +45,9 @@ public class HUDButtons : MonoBehaviour
         canvas = GetComponent<CanvasGroup>();
         Invoke("turnOffLevelInfo", 5.0f);
 
+        //Restores volume when game is normal speed
+        SFXVol = PlayerPrefs.GetFloat("SFXVol");
+        _mixer.SetFloat("SFXVol", SFXVol);
     }
     private void Awake()
     {
@@ -209,6 +218,9 @@ public class HUDButtons : MonoBehaviour
             Debug.Log("Double speed");
 
             AudioManager.instance.PlaySFX("SpeedUp");
+
+            // Reduces volume when game is sped up
+            _mixer.SetFloat("SFXVol", -7.5f);
         }
         else if (isNormalSpeed == false)
         {
@@ -216,6 +228,10 @@ public class HUDButtons : MonoBehaviour
             isNormalSpeed = true;
             speedSelected.SetActive(false);
             Debug.Log("Normal speed");
+
+            //Restores volume when game is normal speed
+            SFXVol = PlayerPrefs.GetFloat("SFXVol");
+            _mixer.SetFloat("SFXVol", SFXVol);
         }
     }
 

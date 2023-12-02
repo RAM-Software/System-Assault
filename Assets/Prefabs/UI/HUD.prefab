@@ -728,6 +728,7 @@ MonoBehaviour:
   LevelInfoText: {fileID: 6707984154580105919}
   speedUnselected: {fileID: 6213182230274430774}
   speedSelected: {fileID: 6687196690414866657}
+  _mixer: {fileID: 24100000, guid: 6d56d28209f8b3249afb507d5d043bbe, type: 2}
 --- !u!1 &1124935952807580271
 GameObject:
   m_ObjectHideFlags: 0
