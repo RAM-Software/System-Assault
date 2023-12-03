@@ -9469,6 +9469,12 @@ PrefabInstance:
       propertyPath: emailAmountText
       value: 
       objectReference: {fileID: 1231556007}
+    - target: {fileID: 4911023491012272634, guid: 0727468a36b21b04a859fc0f39ebed20,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e3590c1614c6e29488f8487ab4da87fe,
+        type: 3}
     - target: {fileID: 4957851349301343362, guid: 0727468a36b21b04a859fc0f39ebed20,
         type: 3}
       propertyPath: m_SizeDelta.x
