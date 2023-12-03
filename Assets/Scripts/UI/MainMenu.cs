@@ -9,10 +9,21 @@ public class MainMenu : MonoBehaviour
     public GameObject Shop;
     public GameObject Credits;
     public GameObject Options;
+    public GameObject DLCSelected;
+    public GameObject DLCUnselected;
+    public int isDLCTriggered;
     // Start is called before the first frame update
     void Start()
     {
-        
+        isDLCTriggered = PlayerPrefs.GetInt("DLC");
+        if (isDLCTriggered == 0)
+        {
+            DLCSelected.SetActive(false);
+        }
+        else
+        {
+            DLCSelected.SetActive(true);
+        }
     }
 
     // Update is called once per frame
@@ -48,6 +59,7 @@ public class MainMenu : MonoBehaviour
     {
         MainButtons.SetActive(false);
         LevelSelectButtons.SetActive(true);
+        //ToggleDLC();
     }
 
     public void CreditsMenu()
@@ -93,7 +105,30 @@ public class MainMenu : MonoBehaviour
 
     public void LevelSelectDLC()
     {
-        SceneManager.LoadScene("DLC");
+        if (isDLCTriggered == 1)
+        {
+            SceneManager.LoadScene("DLC");
+        }
+        else if (isDLCTriggered == 0)
+        {
+            AudioManager.instance.PlaySFX("FailSummon");
+        }
+    }
+
+    public void ToggleDLC()
+    {
+        if (isDLCTriggered == 0)
+        {
+            isDLCTriggered = 1;
+            PlayerPrefs.SetInt("DLC", 1);
+            DLCSelected.SetActive(true);
+        }
+        else
+        {
+            isDLCTriggered = 0;
+            PlayerPrefs.SetInt("DLC", 0);
+            DLCSelected.SetActive(false);
+        }
     }
 
     public void ShopMenu()

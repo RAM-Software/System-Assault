@@ -27,6 +27,7 @@ public class HUDButtons : MonoBehaviour
     public GameObject LevelInfoText;
     public GameObject speedUnselected;
     public GameObject speedSelected;
+    public GameObject mp3Locked;
 
     public AudioMixer _mixer;
 
@@ -48,6 +49,15 @@ public class HUDButtons : MonoBehaviour
         //Restores volume when game is normal speed
         SFXVol = PlayerPrefs.GetFloat("SFXVol");
         _mixer.SetFloat("SFXVol", SFXVol);
+
+        if (PlayerPrefs.GetInt("DLC") == 1)
+        {
+            mp3Locked.SetActive(false);
+        }
+        else
+        {
+            mp3Locked.SetActive(true);
+        }
     }
     private void Awake()
     {
@@ -196,6 +206,7 @@ public class HUDButtons : MonoBehaviour
 
     public void mp3InfoButton()
     {
+
         if (mp3InfoVisible == false)
         {
             mp3Info.SetActive(true);

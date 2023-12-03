@@ -8,7 +8,7 @@ public class SelectUnit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTroop = "Basic";
+        //currentTroop = "Basic";
     }
 
     // Update is called once per frame
@@ -35,8 +35,15 @@ public class SelectUnit : MonoBehaviour
 
     public void SetMP3Troop()
     {
-        currentTroop = "MP3";
-        Debug.Log(currentTroop);
+        if (PlayerPrefs.GetInt("DLC") == 1)
+        {
+            currentTroop = "MP3";
+            Debug.Log(currentTroop);
+        }
+        else
+        {
+            AudioManager.instance.PlaySFX("FailSummon");
+        }
     }
 
 }
