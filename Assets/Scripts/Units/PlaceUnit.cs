@@ -14,7 +14,7 @@ public class PlaceUnit : MonoBehaviour, ITap
     public string activeTroop;
     
     //Currency Variables
-    public static int currencyCount = 0;
+    public static int currencyCount;
     public int goldPerSecond = 1;
     public int basicPrice = 50;
     public int fastPrice = 70;
