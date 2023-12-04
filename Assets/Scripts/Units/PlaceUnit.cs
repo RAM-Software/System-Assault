@@ -14,7 +14,7 @@ public class PlaceUnit : MonoBehaviour, ITap
     public string activeTroop;
     
     //Currency Variables
-    public static int currencyCount;
+    public static int currencyCount = 0;
     public int goldPerSecond = 1;
     public int basicPrice = 50;
     public int fastPrice = 70;
@@ -31,11 +31,14 @@ public class PlaceUnit : MonoBehaviour, ITap
     AudioSource audioSource;
     public AudioClip troopsummonClip;
 
+    //Check
+    public bool isOriginalSpawn = false;
+
     void Start()
     {
         //Starts passive currency generation
         InvokeRepeating("currencyGain", 2.0f, 1.0f);
-        currencyCount = currencyStartAmount;
+        SpawnGold();
         SetCurrencyText();
 
         //Audio code
@@ -142,5 +145,13 @@ public class PlaceUnit : MonoBehaviour, ITap
     public void PlaySound(AudioClip clip)
     {
        audioSource.PlayOneShot(clip);
+    }
+
+    public void SpawnGold()
+    {
+        if(isOriginalSpawn)
+        {
+            currencyCount = currencyStartAmount;
+        }
     }
 }
