@@ -58005,7 +58005,7 @@ PrefabInstance:
         type: 3}
       propertyPath: helperText
       value: 
-      objectReference: {fileID: 804260867}
+      objectReference: {fileID: 1578061267}
     - target: {fileID: 7847747421303245077, guid: 83bda38d21b986c4aa25259c0051622d,
         type: 3}
       propertyPath: normalUnit
@@ -64836,6 +64836,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b7bf76fc12d2e540a4faae0e73f2e69, type: 3}
+--- !u!1 &1578061267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5708605969692946585, guid: 55f7438268a1c324bac777c3c3531cbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 587692939}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1579464666
 Mesh:
   m_ObjectHideFlags: 0
